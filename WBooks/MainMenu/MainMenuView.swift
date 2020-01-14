@@ -12,7 +12,7 @@ import WolmoCore
 class MainMenuView: UIView, NibLoadable {
     @IBOutlet weak var booksTable: UITableView! {
         didSet {
-            booksTable.backgroundColor = UIColor.black
+            booksTable.backgroundColor = UIColor.white
             booksTable.separatorStyle = .none
         }
     }
