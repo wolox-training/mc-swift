@@ -32,11 +32,11 @@
 		CE93E56B23C77E4900232295 /* LandingScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE93E56A23C77E4900232295 /* LandingScreenView.swift */; };
 		CEB6CB4D23CCF2AC00DB149D /* LandingScreenView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEB6CB4C23CCF2AC00DB149D /* LandingScreenView.xib */; };
 		CEB6CB5123CDA2A800DB149D /* MainMenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB6CB4F23CDA2A800DB149D /* MainMenuController.swift */; };
-		CEB6CB5223CDA2A800DB149D /* MainMenuView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEB6CB5023CDA2A800DB149D /* MainMenuView.xib */; };
 		CEB6CB5423CDA2C500DB149D /* MainMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB6CB5323CDA2C500DB149D /* MainMenuView.swift */; };
 		CEB6CB5723CDA76300DB149D /* BookCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB6CB5623CDA76300DB149D /* BookCell.swift */; };
 		CEB6CB5B23CDA92F00DB149D /* BookCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEB6CB5A23CDA92F00DB149D /* BookCell.xib */; };
 		CEB6CB5E23CDAE9C00DB149D /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB6CB5D23CDAE9C00DB149D /* Book.swift */; };
+		CEB6CB6023CE5A3100DB149D /* MainMenuView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEB6CB5F23CE5A3100DB149D /* MainMenuView.xib */; };
 		CEB934DD1D21992100DF75C2 /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB934DC1D21992100DF75C2 /* Environment.swift */; };
 		CED934891E8466A60017CF96 /* ReactiveSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CED934871E8466A60017CF96 /* ReactiveSwift.framework */; };
 		E1530D991ED378F2002A9002 /* Rollbar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1530D981ED378F2002A9002 /* Rollbar.framework */; };
@@ -110,11 +110,11 @@
 		CE93E56A23C77E4900232295 /* LandingScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LandingScreenView.swift; path = WBooks/LandingScreen/LandingScreenView.swift; sourceTree = SOURCE_ROOT; };
 		CEB6CB4C23CCF2AC00DB149D /* LandingScreenView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LandingScreenView.xib; sourceTree = "<group>"; };
 		CEB6CB4F23CDA2A800DB149D /* MainMenuController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuController.swift; sourceTree = "<group>"; };
-		CEB6CB5023CDA2A800DB149D /* MainMenuView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainMenuView.xib; sourceTree = "<group>"; };
 		CEB6CB5323CDA2C500DB149D /* MainMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuView.swift; sourceTree = "<group>"; };
 		CEB6CB5623CDA76300DB149D /* BookCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookCell.swift; sourceTree = "<group>"; };
 		CEB6CB5A23CDA92F00DB149D /* BookCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BookCell.xib; sourceTree = "<group>"; };
 		CEB6CB5D23CDAE9C00DB149D /* Book.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
+		CEB6CB5F23CE5A3100DB149D /* MainMenuView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainMenuView.xib; sourceTree = "<group>"; };
 		CEB934DC1D21992100DF75C2 /* Environment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
 		CED934861E8466A60017CF96 /* Core.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Core.framework; path = Carthage/Build/iOS/Core.framework; sourceTree = "<group>"; };
 		CED934871E8466A60017CF96 /* ReactiveSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReactiveSwift.framework; path = Carthage/Build/iOS/ReactiveSwift.framework; sourceTree = "<group>"; };
@@ -193,7 +193,7 @@
 			children = (
 				CEB6CB5C23CDAE8D00DB149D /* Models */,
 				CEB6CB5523CDA70F00DB149D /* BookCell */,
-				CEB6CB4E23CD9A4600DB149D /* BookMenu */,
+				CEB6CB4E23CD9A4600DB149D /* MainMenu */,
 				CE93E56723C7795200232295 /* LandingScreen */,
 				CE93E55E23C3CB4700232295 /* ConfigurationFiles */,
 				E1530D9A1ED378F9002A9002 /* Services */,
@@ -271,14 +271,14 @@
 			path = LandingScreen;
 			sourceTree = "<group>";
 		};
-		CEB6CB4E23CD9A4600DB149D /* BookMenu */ = {
+		CEB6CB4E23CD9A4600DB149D /* MainMenu */ = {
 			isa = PBXGroup;
 			children = (
 				CEB6CB4F23CDA2A800DB149D /* MainMenuController.swift */,
-				CEB6CB5023CDA2A800DB149D /* MainMenuView.xib */,
 				CEB6CB5323CDA2C500DB149D /* MainMenuView.swift */,
+				CEB6CB5F23CE5A3100DB149D /* MainMenuView.xib */,
 			);
-			path = BookMenu;
+			path = MainMenu;
 			sourceTree = "<group>";
 		};
 		CEB6CB5523CDA70F00DB149D /* BookCell */ = {
@@ -417,9 +417,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CEB6CB5223CDA2A800DB149D /* MainMenuView.xib in Resources */,
 				CEB6CB5B23CDA92F00DB149D /* BookCell.xib in Resources */,
 				CEB6CB4D23CCF2AC00DB149D /* LandingScreenView.xib in Resources */,
+				CEB6CB6023CE5A3100DB149D /* MainMenuView.xib in Resources */,
 				9D15750C1CB1B27500EA395E /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

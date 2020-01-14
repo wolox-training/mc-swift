@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import SwiftUI
 import WolmoCore
 
 class BookCell: UITableViewCell, NibLoadable {

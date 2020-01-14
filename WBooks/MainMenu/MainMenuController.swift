@@ -13,27 +13,27 @@ class MainMenuController: UIViewController, UITableViewDelegate, UITableViewData
     private let _view: MainMenuView = MainMenuView.loadFromNib()!
     var booksArray: [Book] = []
     
-    @IBOutlet weak var booksTable: UITableView!
-    
+//    @IBOutlet weak var booksTable: UITableView!
+//
     func tableView(_ booksTable: UITableView, numberOfRowsInSection section: Int) -> Int {
 //        booksArray.count
         return 6
     }
-    
+
     func tableView(_ booksTable: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 120
     }
-    
+
     func tableView(_ booksTable: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = _view.booksTable.dequeue(cell: BookCell.self)!
 //        let book = booksArray[indexPath.row]
-        
+
 //        cell.bookTitle.text = book["title"]
 //        cell.bookAuthor.text = book["author"]
         cell.bookTitle.text = "HOLATITULO"
         cell.bookAuthor.text = "HOLAAUTOR"
 //        cell.bookCover = book["cover"]
-        
+
         return cell
     }
     
@@ -55,28 +55,28 @@ class MainMenuController: UIViewController, UITableViewDelegate, UITableViewData
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        configureBooksTable()
+//        configureBooksTable()
     }
     
-    private func configureBooksTable() {
-        booksArray = createBooksArray()
-        _view.booksTable.delegate = self
-        _view.booksTable.dataSource = self
-        _view.booksTable.register(cell: BookCell.self)
-//        _view.booksTable.rowHeight = UITableViewAutomaticDimension
-        _view.booksTable.backgroundColor = UIColor.clear
-    }
+//    private func configureBooksTable() {
+//        booksArray = createBooksArray()
+//        _view.booksTable.delegate = self
+//        _view.booksTable.dataSource = self
+//        _view.booksTable.register(cell: BookCell.self)
+////        _view.booksTable.rowHeight = UITableViewAutomaticDimension
+//        _view.booksTable.backgroundColor = UIColor.clear
+//    }
     
-    private func createBooksArray() -> [Book] {
-        var books: [Book] = []
-        books.append(Book(title: "A little bird told me", author: "Timothy Cross"))
-        books.append(Book(title: "When the doves disappeared", author: "Sofi Oksanen"))
-        books.append(Book(title: "The best book in the world", author: "Peter Sjernstrom"))
-        books.append(Book(title: "Be creative", author: "Tony Alcazar"))
-        books.append(Book(title: "Redesign the web", author: "Liliana Castilla"))
-        books.append(Book(title: "The yellow book", author: "Big bird"))
-
-        return books
-    }
+//    private func createBooksArray() -> [Book] {
+//        var books: [Book] = []
+//        books.append(Book(title: "A little bird told me", author: "Timothy Cross"))
+//        books.append(Book(title: "When the doves disappeared", author: "Sofi Oksanen"))
+//        books.append(Book(title: "The best book in the world", author: "Peter Sjernstrom"))
+//        books.append(Book(title: "Be creative", author: "Tony Alcazar"))
+//        books.append(Book(title: "Redesign the web", author: "Liliana Castilla"))
+//        books.append(Book(title: "The yellow book", author: "Big bird"))
+//
+//        return books
+//    }
 
 }
