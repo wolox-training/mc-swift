@@ -31,6 +31,9 @@
 		CE93E56923C77B0F00232295 /* LandingScreenController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE93E56823C77B0F00232295 /* LandingScreenController.swift */; };
 		CE93E56B23C77E4900232295 /* LandingScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE93E56A23C77E4900232295 /* LandingScreenView.swift */; };
 		CEB6CB4D23CCF2AC00DB149D /* LandingScreenView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEB6CB4C23CCF2AC00DB149D /* LandingScreenView.xib */; };
+		CEB6CB5123CDA2A800DB149D /* MainMenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB6CB4F23CDA2A800DB149D /* MainMenuController.swift */; };
+		CEB6CB5223CDA2A800DB149D /* MainMenuView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEB6CB5023CDA2A800DB149D /* MainMenuView.xib */; };
+		CEB6CB5423CDA2C500DB149D /* MainMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB6CB5323CDA2C500DB149D /* MainMenuView.swift */; };
 		CEB934DD1D21992100DF75C2 /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB934DC1D21992100DF75C2 /* Environment.swift */; };
 		CED934891E8466A60017CF96 /* ReactiveSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CED934871E8466A60017CF96 /* ReactiveSwift.framework */; };
 		E1530D991ED378F2002A9002 /* Rollbar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1530D981ED378F2002A9002 /* Rollbar.framework */; };
@@ -103,6 +106,9 @@
 		CE93E56823C77B0F00232295 /* LandingScreenController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingScreenController.swift; sourceTree = "<group>"; };
 		CE93E56A23C77E4900232295 /* LandingScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LandingScreenView.swift; path = WBooks/LandingScreen/LandingScreenView.swift; sourceTree = SOURCE_ROOT; };
 		CEB6CB4C23CCF2AC00DB149D /* LandingScreenView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LandingScreenView.xib; sourceTree = "<group>"; };
+		CEB6CB4F23CDA2A800DB149D /* MainMenuController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuController.swift; sourceTree = "<group>"; };
+		CEB6CB5023CDA2A800DB149D /* MainMenuView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainMenuView.xib; sourceTree = "<group>"; };
+		CEB6CB5323CDA2C500DB149D /* MainMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuView.swift; sourceTree = "<group>"; };
 		CEB934DC1D21992100DF75C2 /* Environment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
 		CED934861E8466A60017CF96 /* Core.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Core.framework; path = Carthage/Build/iOS/Core.framework; sourceTree = "<group>"; };
 		CED934871E8466A60017CF96 /* ReactiveSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReactiveSwift.framework; path = Carthage/Build/iOS/ReactiveSwift.framework; sourceTree = "<group>"; };
@@ -179,6 +185,7 @@
 		9D1575031CB1B27500EA395E /* WBooks */ = {
 			isa = PBXGroup;
 			children = (
+				CEB6CB4E23CD9A4600DB149D /* BookMenu */,
 				CE93E56723C7795200232295 /* LandingScreen */,
 				CE93E55E23C3CB4700232295 /* ConfigurationFiles */,
 				E1530D9A1ED378F9002A9002 /* Services */,
@@ -254,6 +261,16 @@
 				CE93E56A23C77E4900232295 /* LandingScreenView.swift */,
 			);
 			path = LandingScreen;
+			sourceTree = "<group>";
+		};
+		CEB6CB4E23CD9A4600DB149D /* BookMenu */ = {
+			isa = PBXGroup;
+			children = (
+				CEB6CB4F23CDA2A800DB149D /* MainMenuController.swift */,
+				CEB6CB5023CDA2A800DB149D /* MainMenuView.xib */,
+				CEB6CB5323CDA2C500DB149D /* MainMenuView.swift */,
+			);
+			path = BookMenu;
 			sourceTree = "<group>";
 		};
 		E1530D9A1ED378F9002A9002 /* Services */ = {
@@ -375,6 +392,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CEB6CB5223CDA2A800DB149D /* MainMenuView.xib in Resources */,
 				CEB6CB4D23CCF2AC00DB149D /* LandingScreenView.xib in Resources */,
 				9D15750C1CB1B27500EA395E /* Assets.xcassets in Resources */,
 			);
@@ -448,10 +466,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				CEB934DD1D21992100DF75C2 /* Environment.swift in Sources */,
+				CEB6CB5423CDA2C500DB149D /* MainMenuView.swift in Sources */,
 				CE93E56B23C77E4900232295 /* LandingScreenView.swift in Sources */,
 				E1530D9C1ED37905002A9002 /* RollbarService.swift in Sources */,
 				CE93E56923C77B0F00232295 /* LandingScreenController.swift in Sources */,
 				9D1575051CB1B27500EA395E /* AppDelegate.swift in Sources */,
+				CEB6CB5123CDA2A800DB149D /* MainMenuController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
