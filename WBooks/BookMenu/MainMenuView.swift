@@ -10,6 +10,10 @@ import SwiftUI
 import WolmoCore
 
 class MainMenuView: UIView, NibLoadable {
-    
-
+    @IBOutlet weak var booksTable: UITableView! {
+        didSet {
+            booksTable.backgroundColor = UIColor.black
+            booksTable.separatorStyle = .none
+        }
+    }
 }
