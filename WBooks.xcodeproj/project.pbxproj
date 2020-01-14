@@ -101,7 +101,7 @@
 		CE93E56323C3CBF900232295 /* Release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Release.xcconfig; sourceTree = "<group>"; };
 		CE93E56423C3CC0D00232295 /* Production.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Production.xcconfig; sourceTree = "<group>"; };
 		CE93E56823C77B0F00232295 /* LandingScreenController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingScreenController.swift; sourceTree = "<group>"; };
-		CE93E56A23C77E4900232295 /* LandingScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingScreenView.swift; sourceTree = "<group>"; };
+		CE93E56A23C77E4900232295 /* LandingScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LandingScreenView.swift; path = WBooks/LandingScreen/LandingScreenView.swift; sourceTree = SOURCE_ROOT; };
 		CEB6CB4C23CCF2AC00DB149D /* LandingScreenView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LandingScreenView.xib; sourceTree = "<group>"; };
 		CEB934DC1D21992100DF75C2 /* Environment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
 		CED934861E8466A60017CF96 /* Core.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Core.framework; path = Carthage/Build/iOS/Core.framework; sourceTree = "<group>"; };
