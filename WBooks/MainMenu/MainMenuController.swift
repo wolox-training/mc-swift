@@ -30,7 +30,7 @@ class MainMenuController: UIViewController, UITableViewDelegate, UITableViewData
 
         cell.bookTitle.text = book.title
         cell.bookAuthor.text = book.author
-//        cell.bookCover = book["cover"]
+        cell.bookCover.image = book.cover
 
         return cell
     }
@@ -67,12 +67,12 @@ class MainMenuController: UIViewController, UITableViewDelegate, UITableViewData
     
     private func createBooksArray() -> [Book] {
         var books: [Book] = []
-        books.append(Book(title: "A little bird told me", author: "Timothy Cross"))
-        books.append(Book(title: "When the doves disappeared", author: "Sofi Oksanen"))
-        books.append(Book(title: "The best book in the world", author: "Peter Sjernstrom"))
-        books.append(Book(title: "Be creative", author: "Tony Alcazar"))
-        books.append(Book(title: "Redesign the web", author: "Liliana Castilla"))
-        books.append(Book(title: "The yellow book", author: "Big bird"))
+        books.append(Book(title: "A little bird told me", author: "Timothy Cross", cover: #imageLiteral(resourceName: "img_book1")))
+        books.append(Book(title: "When the doves disappeared", author: "Sofi Oksanen", cover: #imageLiteral(resourceName: "img_book2")))
+        books.append(Book(title: "The best book in the world", author: "Peter Sjernstrom", cover: #imageLiteral(resourceName: "img_book3")))
+        books.append(Book(title: "Be creative", author: "Tony Alcazar", cover: #imageLiteral(resourceName: "img_book4")))
+        books.append(Book(title: "Redesign the web", author: "Liliana Castilla", cover: #imageLiteral(resourceName: "img_book5")))
+        books.append(Book(title: "The yellow book", author: "Big bird", cover: #imageLiteral(resourceName: "img_book6")))
 
         return books
     }

@@ -12,4 +12,5 @@ import WolmoCore
 class BookCell: UITableViewCell, NibLoadable {
     @IBOutlet weak var bookTitle: UILabel!
     @IBOutlet weak var bookAuthor: UILabel!
+    @IBOutlet weak var bookCover: UIImageView!
 }

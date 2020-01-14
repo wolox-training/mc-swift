@@ -95,6 +95,7 @@
             <viewLayoutGuide key="safeArea" id="rUM-fw-buD"/>
             <connections>
                 <outlet property="bookAuthor" destination="YNV-ZP-EL9" id="29w-E9-K65"/>
+                <outlet property="bookCover" destination="M4F-Sf-AIb" id="2yV-YH-BAW"/>
                 <outlet property="bookTitle" destination="i7K-3V-vHq" id="QXc-2Z-tvm"/>
             </connections>
             <point key="canvasLocation" x="137.68115942028987" y="152.67857142857142"/>
