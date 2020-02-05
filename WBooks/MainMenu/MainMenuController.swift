@@ -13,15 +13,8 @@ class MainMenuController: UIViewController, UITableViewDelegate, UITableViewData
     private let _view: MainMenuView = MainMenuView.loadFromNib()!
     var booksArray: [Book] = []
     
-//    @IBOutlet weak var booksTable: UITableView!
-//
     func tableView(_ booksTable: UITableView, numberOfRowsInSection section: Int) -> Int {
-//        booksArray.count
-        return 6
-    }
-
-    func tableView(_ booksTable: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 120
+        booksArray.count
     }
 
     func tableView(_ booksTable: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -61,14 +54,13 @@ class MainMenuController: UIViewController, UITableViewDelegate, UITableViewData
         _view.booksTable.delegate = self
         _view.booksTable.dataSource = self
         _view.booksTable.register(cell: BookCell.self)
-//        _view.booksTable.rowHeight = UITableViewAutomaticDimension
-        _view.booksTable.backgroundColor = UIColor.clear
+        _view.booksTable.rowHeight = UITableView.automaticDimension
     }
     
     private func createBooksArray() -> [Book] {
         var books: [Book] = []
         books.append(Book(title: "A little bird told me", author: "Timothy Cross", cover: #imageLiteral(resourceName: "img_book1")))
-        books.append(Book(title: "When the doves disappeared", author: "Sofi Oksanen", cover: #imageLiteral(resourceName: "img_book2")))
+        books.append(Book(title: "When the doves lalala lala lalal lallalal disappeared", author: "Sofi Oksanen", cover: #imageLiteral(resourceName: "img_book2")))
         books.append(Book(title: "The best book in the world", author: "Peter Sjernstrom", cover: #imageLiteral(resourceName: "img_book3")))
         books.append(Book(title: "Be creative", author: "Tony Alcazar", cover: #imageLiteral(resourceName: "img_book4")))
         books.append(Book(title: "Redesign the web", author: "Liliana Castilla", cover: #imageLiteral(resourceName: "img_book5")))
