@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina5_5" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" userLabel="LandingScreenView" customClass="LandingScreenView" customModule="WBooks">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bc_inicio" translatesAutoresizingMaskIntoConstraints="NO" id="eUQ-Sb-EAt">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WwP-kt-rhZ">
+                    <rect key="frame" x="74" y="680" width="266" height="16"/>
+                    <attributedString key="attributedText">
+                        <fragment content="Designed, developed and used  by woloxers">
+                            <attributes>
+                                <font key="NSFont" size="13" name=".AppleSystemUIFont"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="right" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                            </attributes>
+                        </fragment>
+                    </attributedString>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="f1N-kq-N9k">
+                    <rect key="frame" x="80" y="443" width="254" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="0ni-xE-aQB"/>
+                    </constraints>
+                    <state key="normal">
+                        <attributedString key="attributedTitle">
+                            <fragment content="INGRESAR CON GOOGLE">
+                                <attributes>
+                                    <color key="NSColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                    <font key="NSFont" size="18" name="TrebuchetMS-Bold"/>
+                                    <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                </attributes>
+                            </fragment>
+                        </attributedString>
+                    </state>
+                    <connections>
+                        <action selector="loginWithGoogle:" destination="iN0-l3-epB" eventType="touchUpInside" id="rw6-b2-UzC"/>
+                    </connections>
+                </button>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Group" translatesAutoresizingMaskIntoConstraints="NO" id="X7T-03-xfB">
+                    <rect key="frame" x="126.66666666666667" y="207" width="161.00000000000003" height="122"/>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="f1N-kq-N9k" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="80" id="7iN-sF-LW0"/>
+                <constraint firstItem="WwP-kt-rhZ" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="DUS-oB-XhA"/>
+                <constraint firstItem="eUQ-Sb-EAt" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="N2a-ai-76G"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="eUQ-Sb-EAt" secondAttribute="bottom" id="OF4-YU-eGU"/>
+                <constraint firstItem="X7T-03-xfB" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="Oi1-vH-uKs"/>
+                <constraint firstItem="f1N-kq-N9k" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="XNM-R1-Stx"/>
+                <constraint firstItem="f1N-kq-N9k" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" constant="100" id="ecT-IO-ie1"/>
+                <constraint firstItem="X7T-03-xfB" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" constant="-100" id="eqx-uK-5LT"/>
+                <constraint firstItem="eUQ-Sb-EAt" firstAttribute="bottom" secondItem="WwP-kt-rhZ" secondAttribute="bottom" constant="40" id="gsB-1p-5xd"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="f1N-kq-N9k" secondAttribute="trailing" constant="80" id="nEu-h6-ZPy"/>
+                <constraint firstAttribute="trailing" secondItem="eUQ-Sb-EAt" secondAttribute="trailing" id="sVr-AC-FFl"/>
+                <constraint firstItem="eUQ-Sb-EAt" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="uEy-nm-9QO"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="loginButton" destination="f1N-kq-N9k" id="Ksm-U1-HFt"/>
+            </connections>
+            <point key="canvasLocation" x="139" y="141"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="Group" width="161" height="122"/>
+        <image name="bc_inicio" width="375" height="667"/>
+    </resources>
+</document>
