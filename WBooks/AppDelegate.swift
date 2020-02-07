@@ -27,6 +27,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         RollbarService().initialize()
          *
          */
+        UINavigationBar.appearance().barTintColor = .red
         
         NetworkActivityLogger.shared.level = .debug
         NetworkActivityLogger.shared.startLogging()
