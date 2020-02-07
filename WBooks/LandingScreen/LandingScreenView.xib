@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina5_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -14,11 +14,11 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bc_inicio" translatesAutoresizingMaskIntoConstraints="NO" id="eUQ-Sb-EAt">
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bc_inicio" translatesAutoresizingMaskIntoConstraints="NO" id="eUQ-Sb-EAt">
                     <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                 </imageView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WwP-kt-rhZ">
-                    <rect key="frame" x="74" y="655" width="266" height="16"/>
+                    <rect key="frame" x="74" y="680" width="266" height="16"/>
                     <attributedString key="attributedText">
                         <fragment content="Designed, developed and used  by woloxers">
                             <attributes>
@@ -58,15 +58,15 @@
                 <constraint firstItem="f1N-kq-N9k" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="80" id="7iN-sF-LW0"/>
                 <constraint firstItem="WwP-kt-rhZ" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="DUS-oB-XhA"/>
                 <constraint firstItem="eUQ-Sb-EAt" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="N2a-ai-76G"/>
-                <constraint firstAttribute="bottom" secondItem="eUQ-Sb-EAt" secondAttribute="bottom" id="OF4-YU-eGU"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="eUQ-Sb-EAt" secondAttribute="bottom" id="OF4-YU-eGU"/>
                 <constraint firstItem="X7T-03-xfB" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="Oi1-vH-uKs"/>
                 <constraint firstItem="f1N-kq-N9k" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="XNM-R1-Stx"/>
                 <constraint firstItem="f1N-kq-N9k" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" constant="100" id="ecT-IO-ie1"/>
                 <constraint firstItem="X7T-03-xfB" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" constant="-100" id="eqx-uK-5LT"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="WwP-kt-rhZ" secondAttribute="bottom" constant="65" id="gsB-1p-5xd"/>
+                <constraint firstItem="eUQ-Sb-EAt" firstAttribute="bottom" secondItem="WwP-kt-rhZ" secondAttribute="bottom" constant="40" id="gsB-1p-5xd"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="f1N-kq-N9k" secondAttribute="trailing" constant="80" id="nEu-h6-ZPy"/>
                 <constraint firstAttribute="trailing" secondItem="eUQ-Sb-EAt" secondAttribute="trailing" id="sVr-AC-FFl"/>
-                <constraint firstItem="eUQ-Sb-EAt" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="uEy-nm-9QO"/>
+                <constraint firstItem="eUQ-Sb-EAt" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="uEy-nm-9QO"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <connections>
