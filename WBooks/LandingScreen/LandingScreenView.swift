@@ -6,7 +6,6 @@
 //  Copyright © 2020 Wolox. All rights reserved.
 //
 
-import SwiftUI
 import WolmoCore
 
 class LandingScreenView: UIView, NibLoadable {
