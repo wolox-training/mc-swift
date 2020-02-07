@@ -14,14 +14,19 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" layoutMarginsFollowReadableWidth="YES" alwaysBounceVertical="YES" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="m3E-y7-6Rt">
-                    <rect key="frame" x="27" y="29" width="360" height="866"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="m3E-y7-6Rt">
+                    <rect key="frame" x="27" y="18" width="360" height="877"/>
                     <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                     <color key="sectionIndexBackgroundColor" red="0.91764705882352937" green="0.96470588235294119" blue="0.98431372549019602" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                 </tableView>
             </subviews>
             <color key="backgroundColor" red="0.92569214105606079" green="0.96439880132675171" blue="0.9803958535194397" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+            <constraints>
+                <constraint firstItem="m3E-y7-6Rt" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="18" id="1Yc-Wu-c44"/>
+                <constraint firstItem="m3E-y7-6Rt" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="27" id="S5t-qW-ose"/>
+                <constraint firstAttribute="bottom" secondItem="m3E-y7-6Rt" secondAttribute="bottom" constant="1" id="dQU-P6-kry" userLabel="bottom = Books Table.bottom"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="m3E-y7-6Rt" secondAttribute="trailing" constant="27" id="jjl-mg-V0i"/>
+            </constraints>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <connections>
                 <outlet property="booksTable" destination="m3E-y7-6Rt" id="Gn3-V1-mEB"/>
