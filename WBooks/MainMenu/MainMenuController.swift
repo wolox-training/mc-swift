@@ -28,6 +28,10 @@ class MainMenuController: UIViewController, UITableViewDelegate, UITableViewData
         return cell
     }
     
+    func tableView(_ booksTable: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 10
+    }
+    
     required public init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
@@ -59,12 +63,12 @@ class MainMenuController: UIViewController, UITableViewDelegate, UITableViewData
     
     private func createBooksArray() -> [Book] {
         var books: [Book] = []
-        books.append(Book(title: "A little bird told me", author: "Timothy Cross", cover: #imageLiteral(resourceName: "img_book1")))
-        books.append(Book(title: "When the doves lalala lala lalal lallalal disappeared", author: "Sofi Oksanen", cover: #imageLiteral(resourceName: "img_book2")))
-        books.append(Book(title: "The best book in the world", author: "Peter Sjernstrom", cover: #imageLiteral(resourceName: "img_book3")))
-        books.append(Book(title: "Be creative", author: "Tony Alcazar", cover: #imageLiteral(resourceName: "img_book4")))
-        books.append(Book(title: "Redesign the web", author: "Liliana Castilla", cover: #imageLiteral(resourceName: "img_book5")))
-        books.append(Book(title: "The yellow book", author: "Big bird", cover: #imageLiteral(resourceName: "img_book6")))
+        books.append(Book(title: "A Little Bird Told Me", author: "Timothy Cross", cover: #imageLiteral(resourceName: "img_book1")))
+        books.append(Book(title: "When The Doves Disappeared", author: "Sofi Oksanen", cover: #imageLiteral(resourceName: "img_book2")))
+        books.append(Book(title: "The Best Book In The World", author: "Peter Sjernstrom", cover: #imageLiteral(resourceName: "img_book3")))
+        books.append(Book(title: "Be Creative", author: "Tony Alcazar", cover: #imageLiteral(resourceName: "img_book4")))
+        books.append(Book(title: "Redesign The Web", author: "Liliana Castilla", cover: #imageLiteral(resourceName: "img_book5")))
+        books.append(Book(title: "The Yellow Book", author: "Big bird", cover: #imageLiteral(resourceName: "img_book6")))
 
         return books
     }

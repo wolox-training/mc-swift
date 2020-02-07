@@ -17,7 +17,7 @@
                     <rect key="frame" x="0.0" y="5" width="414" height="100"/>
                     <subviews>
                         <stackView opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nb4-3Q-DXf" userLabel="Stack">
-                            <rect key="frame" x="0.0" y="15" width="414" height="70"/>
+                            <rect key="frame" x="20" y="15" width="374" height="70"/>
                             <subviews>
                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M4F-Sf-AIb" userLabel="Cover">
                                     <rect key="frame" x="0.0" y="0.0" width="70" height="70"/>
@@ -26,27 +26,24 @@
                                         <constraint firstAttribute="width" constant="70" id="isn-PL-mSd"/>
                                     </constraints>
                                 </imageView>
-                                <stackView opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Kbd-BR-0s2" userLabel="BookInfo">
-                                    <rect key="frame" x="70" y="0.0" width="344" height="70"/>
+                                <stackView opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="Kbd-BR-0s2" userLabel="BookInfo">
+                                    <rect key="frame" x="70" y="0.0" width="304" height="70"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i7K-3V-vHq">
-                                            <rect key="frame" x="0.0" y="0.0" width="344" height="50"/>
-                                            <constraints>
-                                                <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="2IC-pV-avP"/>
-                                            </constraints>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i7K-3V-vHq">
+                                            <rect key="frame" x="0.0" y="0.0" width="304" height="31.5"/>
                                             <attributedString key="attributedText">
                                                 <fragment content="Title">
                                                     <attributes>
                                                         <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                                        <font key="NSFont" size="23" name="Avenir-Medium"/>
-                                                        <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="truncatingTail" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                        <font key="NSFont" size="18" name="Arial-BoldMT"/>
+                                                        <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                     </attributes>
                                                 </fragment>
                                             </attributedString>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YNV-ZP-EL9">
-                                            <rect key="frame" x="0.0" y="50" width="344" height="20"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YNV-ZP-EL9">
+                                            <rect key="frame" x="0.0" y="31.5" width="304" height="38.5"/>
                                             <attributedString key="attributedText">
                                                 <fragment content="Author">
                                                     <attributes>
@@ -81,8 +78,8 @@
                     <color key="backgroundColor" red="0.92569214105606079" green="0.96439880132675171" blue="0.9803958535194397" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     <color key="tintColor" systemColor="systemIndigoColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
-                        <constraint firstAttribute="trailing" secondItem="Nb4-3Q-DXf" secondAttribute="trailing" id="Egs-Tc-OdO"/>
-                        <constraint firstItem="Nb4-3Q-DXf" firstAttribute="leading" secondItem="Sjv-4j-oNq" secondAttribute="leading" id="ZGU-p0-GB7"/>
+                        <constraint firstAttribute="trailing" secondItem="Nb4-3Q-DXf" secondAttribute="trailing" constant="20" id="Egs-Tc-OdO"/>
+                        <constraint firstItem="Nb4-3Q-DXf" firstAttribute="leading" secondItem="Sjv-4j-oNq" secondAttribute="leading" constant="20" id="ZGU-p0-GB7"/>
                         <constraint firstItem="Nb4-3Q-DXf" firstAttribute="top" secondItem="Sjv-4j-oNq" secondAttribute="top" constant="15" id="gdh-kc-1Co"/>
                         <constraint firstAttribute="bottom" secondItem="Nb4-3Q-DXf" secondAttribute="bottom" constant="15" id="wNn-Uk-WP7" userLabel="bottom = BIGstack.bottom"/>
                     </constraints>
