@@ -51,6 +51,7 @@ class MainMenuController: UIViewController, UITableViewDelegate, UITableViewData
     override func viewDidLoad() {
         super.viewDidLoad()
         configureBooksTable()
+        configureNavigationBar()
     }
     
     private func configureBooksTable() {
@@ -71,6 +72,12 @@ class MainMenuController: UIViewController, UITableViewDelegate, UITableViewData
         books.append(Book(title: "The Yellow Book", author: "Big bird", cover: #imageLiteral(resourceName: "img_book6")))
 
         return books
+    }
+    
+    private func configureNavigationBar() {
+        navigationItem.title = "LIBRARY"
+        navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(named: "ic_notifications"), style: UIBarButtonItem.Style.plain, target: self, action: nil)
+        navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(named: "ic_search"), style: UIBarButtonItem.Style.plain, target: self, action: nil)
     }
 
 }

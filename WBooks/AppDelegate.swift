@@ -27,7 +27,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         RollbarService().initialize()
          *
          */
-        UINavigationBar.appearance().barTintColor = .red
         
         NetworkActivityLogger.shared.level = .debug
         NetworkActivityLogger.shared.startLogging()
@@ -36,6 +35,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window?.rootViewController = UINavigationController(rootViewController: MainMenuController())
         window?.makeKeyAndVisible()
         
+        UINavigationBar.appearance().tintColor = .white
+        UINavigationBar.appearance().barTintColor = UIColor.backgroundColor()
+        UINavigationBar.appearance().shadowImage = UIImage()
+        UINavigationBar.appearance().setBackgroundImage(UIImage(named: "bc_nav_bar"), for: .default)
+        UINavigationBar.appearance().titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
+
         return true
     }
 

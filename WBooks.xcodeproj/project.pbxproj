@@ -29,6 +29,7 @@
 		B83388D821E93AAC00085E26 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B83388D021E93AAC00085E26 /* Alamofire.framework */; };
 		B83388D921E93AAC00085E26 /* Runes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B83388D121E93AAC00085E26 /* Runes.framework */; };
 		CE11B45223EDC22D00D7439F /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE11B45123EDC22D00D7439F /* Colors.swift */; };
+		CE11B45523EE0BDE00D7439F /* NavigationBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE11B45423EE0BDE00D7439F /* NavigationBarController.swift */; };
 		CE93E56923C77B0F00232295 /* LandingScreenController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE93E56823C77B0F00232295 /* LandingScreenController.swift */; };
 		CE93E56B23C77E4900232295 /* LandingScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE93E56A23C77E4900232295 /* LandingScreenView.swift */; };
 		CEB6CB4D23CCF2AC00DB149D /* LandingScreenView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEB6CB4C23CCF2AC00DB149D /* LandingScreenView.xib */; };
@@ -104,6 +105,7 @@
 		B83388D021E93AAC00085E26 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
 		B83388D121E93AAC00085E26 /* Runes.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Runes.framework; path = Carthage/Build/iOS/Runes.framework; sourceTree = "<group>"; };
 		CE11B45123EDC22D00D7439F /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		CE11B45423EE0BDE00D7439F /* NavigationBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBarController.swift; sourceTree = "<group>"; };
 		CE93E56123C3CBCC00232295 /* Debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Debug.xcconfig; sourceTree = "<group>"; };
 		CE93E56223C3CBDE00232295 /* Alpha.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Alpha.xcconfig; sourceTree = "<group>"; };
 		CE93E56323C3CBF900232295 /* Release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Release.xcconfig; sourceTree = "<group>"; };
@@ -193,6 +195,7 @@
 		9D1575031CB1B27500EA395E /* WBooks */ = {
 			isa = PBXGroup;
 			children = (
+				CE11B45323EE0BA000D7439F /* NavigationBar */,
 				CEB6CB5C23CDAE8D00DB149D /* Models */,
 				CEB6CB5523CDA70F00DB149D /* BookCell */,
 				CEB6CB4E23CD9A4600DB149D /* MainMenu */,
@@ -251,6 +254,14 @@
 				9D6E40561CB1B93A008CE558 /* Result.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CE11B45323EE0BA000D7439F /* NavigationBar */ = {
+			isa = PBXGroup;
+			children = (
+				CE11B45423EE0BDE00D7439F /* NavigationBarController.swift */,
+			);
+			path = NavigationBar;
 			sourceTree = "<group>";
 		};
 		CE93E55E23C3CB4700232295 /* ConfigurationFiles */ = {
@@ -502,6 +513,7 @@
 				CEB6CB5723CDA76300DB149D /* BookCell.swift in Sources */,
 				CEB6CB5E23CDAE9C00DB149D /* Book.swift in Sources */,
 				CE93E56923C77B0F00232295 /* LandingScreenController.swift in Sources */,
+				CE11B45523EE0BDE00D7439F /* NavigationBarController.swift in Sources */,
 				9D1575051CB1B27500EA395E /* AppDelegate.swift in Sources */,
 				CEB6CB5123CDA2A800DB149D /* MainMenuController.swift in Sources */,
 			);
