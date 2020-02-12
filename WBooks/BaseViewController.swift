@@ -16,13 +16,15 @@ class BaseViewController: UIViewController {
     }
     
     private func setNavigationBar() {
-        let navBar = navigationController!.navigationBar
+        guard let navigationController = navigationController else { return }
+        let navBar = navigationController.navigationBar
+        guard let image = UIImage(named: "bc_nav_bar") else { return }
         navBar.tintColor = .white
         navBar.barTintColor = UIColor.backgroundColor()
         navBar.shadowImage = UIImage()
-        navBar.setBackgroundImage(UIImage(named: "bc_nav_bar"), for: .default)
+        navBar.setBackgroundImage(image, for: .default)
         navBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
-        setBackgroundImageSize(UIImage(named: "bc_nav_bar")!)
+        setBackgroundImageSize(image)
     }
     
     private func setBackgroundImageSize(_ image: UIImage) {
