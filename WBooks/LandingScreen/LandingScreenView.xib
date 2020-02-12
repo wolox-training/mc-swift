@@ -4,7 +4,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
-        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -47,25 +46,24 @@
                     </state>
                 </button>
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Group" translatesAutoresizingMaskIntoConstraints="NO" id="X7T-03-xfB">
-                    <rect key="frame" x="46" y="146" width="322" height="244"/>
+                    <rect key="frame" x="126.66666666666667" y="207" width="161.00000000000003" height="122"/>
                 </imageView>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="f1N-kq-N9k" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="80" id="7iN-sF-LW0"/>
+                <constraint firstItem="f1N-kq-N9k" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="80" id="7iN-sF-LW0"/>
                 <constraint firstItem="WwP-kt-rhZ" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="DUS-oB-XhA"/>
                 <constraint firstItem="eUQ-Sb-EAt" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="N2a-ai-76G"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="eUQ-Sb-EAt" secondAttribute="bottom" id="OF4-YU-eGU"/>
+                <constraint firstAttribute="bottom" secondItem="eUQ-Sb-EAt" secondAttribute="bottom" id="OF4-YU-eGU"/>
                 <constraint firstItem="X7T-03-xfB" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="Oi1-vH-uKs"/>
                 <constraint firstItem="f1N-kq-N9k" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="XNM-R1-Stx"/>
                 <constraint firstItem="f1N-kq-N9k" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" constant="100" id="ecT-IO-ie1"/>
                 <constraint firstItem="X7T-03-xfB" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" constant="-100" id="eqx-uK-5LT"/>
                 <constraint firstItem="eUQ-Sb-EAt" firstAttribute="bottom" secondItem="WwP-kt-rhZ" secondAttribute="bottom" constant="40" id="gsB-1p-5xd"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="f1N-kq-N9k" secondAttribute="trailing" constant="80" id="nEu-h6-ZPy"/>
+                <constraint firstAttribute="trailing" secondItem="f1N-kq-N9k" secondAttribute="trailing" constant="80" id="nEu-h6-ZPy"/>
                 <constraint firstAttribute="trailing" secondItem="eUQ-Sb-EAt" secondAttribute="trailing" id="sVr-AC-FFl"/>
-                <constraint firstItem="eUQ-Sb-EAt" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="uEy-nm-9QO"/>
+                <constraint firstItem="eUQ-Sb-EAt" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="uEy-nm-9QO"/>
             </constraints>
-            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <connections>
                 <outlet property="loginButton" destination="f1N-kq-N9k" id="Ksm-U1-HFt"/>
             </connections>
