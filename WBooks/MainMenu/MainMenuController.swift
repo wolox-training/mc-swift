@@ -73,6 +73,7 @@ extension MainMenuController: UITableViewDataSource {
         _view.booksTable.dataSource = self
         _view.booksTable.register(UINib(nibName: "BookCell", bundle: nil), forCellReuseIdentifier: MainMenuController.cellIdentifier)
         _view.booksTable.rowHeight = UITableView.automaticDimension
+        _view.booksTable.showsVerticalScrollIndicator = false
     }
     
     private func createBooksArray() -> [Book] {
