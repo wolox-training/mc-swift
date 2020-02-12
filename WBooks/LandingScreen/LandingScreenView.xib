@@ -45,9 +45,6 @@
                             </fragment>
                         </attributedString>
                     </state>
-                    <connections>
-                        <action selector="loginWithGoogle:" destination="iN0-l3-epB" eventType="touchUpInside" id="rw6-b2-UzC"/>
-                    </connections>
                 </button>
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Group" translatesAutoresizingMaskIntoConstraints="NO" id="X7T-03-xfB">
                     <rect key="frame" x="46" y="146" width="322" height="244"/>

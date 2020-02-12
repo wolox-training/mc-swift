@@ -32,7 +32,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         NetworkActivityLogger.shared.startLogging()
         
         window = UIWindow(frame: UIScreen.main.bounds)
-        window?.rootViewController = UINavigationController(rootViewController: MainMenuController())
+        window?.rootViewController = UINavigationController(rootViewController: LandingScreenController())
         window?.makeKeyAndVisible()
         return true
     }

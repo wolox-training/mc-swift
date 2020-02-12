@@ -30,5 +30,10 @@ class LandingScreenController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        _view.loginButton.addTarget(self, action: #selector(loginWithGoogle), for: .touchUpInside)
+    }
+
+    @objc private func loginWithGoogle() {
+        self.navigationController?.pushViewController(MainMenuController(), animated: true)
     }
 }
