@@ -33,11 +33,12 @@ class BaseViewController: UIViewController {
         logoImageView.contentMode = .scaleAspectFill
         logoImageView.clipsToBounds = true
         logoImageView.translatesAutoresizingMaskIntoConstraints = false
+        let height: CGFloat = UIScreen.main.bounds.width * (image.size.height) / (image.size.width)
         NSLayoutConstraint.activate([
             logoImageView.leftAnchor.constraint(equalTo: view.leftAnchor),
             logoImageView.rightAnchor.constraint(equalTo: view.rightAnchor),
             logoImageView.topAnchor.constraint(equalTo: view.topAnchor),
-            logoImageView.heightAnchor.constraint(equalToConstant: 110)
+            logoImageView.heightAnchor.constraint(equalToConstant: height)
         ])
     }
 }
