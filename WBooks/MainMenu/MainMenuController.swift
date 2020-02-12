@@ -9,28 +9,10 @@
 import UIKit
 import WolmoCore
 
-class MainMenuController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class MainMenuController: UIViewController {
     private let _view: MainMenuView = MainMenuView.loadFromNib()!
-    var booksArray: [Book] = []
-    
-    func tableView(_ booksTable: UITableView, numberOfRowsInSection section: Int) -> Int {
-        booksArray.count
-    }
-
-    func tableView(_ booksTable: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = _view.booksTable.dequeue(cell: BookCell.self)!
-        let book = booksArray[indexPath.row]
-
-        cell.bookTitle.text = book.title
-        cell.bookAuthor.text = book.author
-        cell.bookCover.image = book.cover
-
-        return cell
-    }
-    
-    func tableView(_ booksTable: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 10
-    }
+    private var booksArray: [Book] = []
+    private static let cellIdentifier = "BookCell"
     
     required public init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
@@ -52,12 +34,37 @@ class MainMenuController: UIViewController, UITableViewDelegate, UITableViewData
         super.viewDidLoad()
         configureBooksTable()
     }
+}
+
+// MARK: - UITableViewDelegate
+extension MainMenuController: UITableViewDelegate {
+    func tableView(_ booksTable: UITableView, numberOfRowsInSection section: Int) -> Int {
+        booksArray.count
+    }
+
+    func tableView(_ booksTable: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let cell = _view.booksTable.dequeueReusableCell(withIdentifier: MainMenuController.cellIdentifier) as? BookCell else { return UITableViewCell() }
+        let book = booksArray[indexPath.row]
+
+        cell.bookTitle.text = book.title
+        cell.bookAuthor.text = book.author
+        cell.bookCover.image = book.cover
+
+        return cell
+    }
     
+    func tableView(_ booksTable: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 10
+    }
+}
+
+// MARK: - UITableViewDataSource
+extension MainMenuController: UITableViewDataSource {
     private func configureBooksTable() {
         booksArray = createBooksArray()
         _view.booksTable.delegate = self
         _view.booksTable.dataSource = self
-        _view.booksTable.register(cell: BookCell.self)
+        _view.booksTable.register(UINib(nibName: "BookCell", bundle: nil), forCellReuseIdentifier: MainMenuController.cellIdentifier)
         _view.booksTable.rowHeight = UITableView.automaticDimension
     }
     
@@ -72,5 +79,4 @@ class MainMenuController: UIViewController, UITableViewDelegate, UITableViewData
 
         return books
     }
-
 }
