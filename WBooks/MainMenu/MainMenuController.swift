@@ -9,7 +9,7 @@
 import UIKit
 import WolmoCore
 
-class MainMenuController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class MainMenuController: BaseViewController, UITableViewDelegate, UITableViewDataSource {
     private let _view: MainMenuView = MainMenuView.loadFromNib()!
     var booksArray: [Book] = []
     
@@ -29,7 +29,7 @@ class MainMenuController: UIViewController, UITableViewDelegate, UITableViewData
     }
     
     func tableView(_ booksTable: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 10
+        return 40
     }
     
     required public init?(coder aDecoder: NSCoder) {
@@ -78,21 +78,5 @@ class MainMenuController: UIViewController, UITableViewDelegate, UITableViewData
         navigationItem.title = "LIBRARY"
         navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(named: "ic_notifications"), style: UIBarButtonItem.Style.plain, target: self, action: nil)
         navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(named: "ic_search"), style: UIBarButtonItem.Style.plain, target: self, action: nil)
-        self.setNavigationBarBackgroundImage()
     }
-    
-    private func setNavigationBarBackgroundImage() {
-        let image = UIImage(named: "bc_nav_bar")
-        let imageView = UIImageView(image: image)
-        view.addSubview(imageView)
-        imageView.translatesAutoresizingMaskIntoConstraints = false
-        let height: CGFloat = UIScreen.main.bounds.width * (image?.size.height)! / (image?.size.width)!
-        NSLayoutConstraint.activate([
-            imageView.topAnchor.constraint(equalTo: view.topAnchor),
-            imageView.heightAnchor.constraint(equalToConstant: height),
-            imageView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-            imageView.trailingAnchor.constraint(equalTo: view.trailingAnchor)
-        ])
-    }
-
 }

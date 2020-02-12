@@ -34,12 +34,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.rootViewController = UINavigationController(rootViewController: MainMenuController())
         window?.makeKeyAndVisible()
-        
-        UINavigationBar.appearance().tintColor = .white
-        UINavigationBar.appearance().barTintColor = UIColor.backgroundColor()
-        UINavigationBar.appearance().shadowImage = UIImage()
-        UINavigationBar.appearance().setBackgroundImage(UIImage(named: "bc_nav_bar"), for: .default)
-        UINavigationBar.appearance().titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
         return true
     }
 
