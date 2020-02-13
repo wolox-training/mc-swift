@@ -30,5 +30,20 @@ class LandingScreenController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        _view.loginButton.addTarget(self, action: #selector(loginWithGoogle), for: .touchUpInside)
+    }
+
+    @objc private func loginWithGoogle() {
+        self.navigationController?.pushViewController(MainMenuController(), animated: true)
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        self.navigationController?.setNavigationBarHidden(false, animated: animated)
+        super.viewWillDisappear(animated)
+    }
+
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationController?.setNavigationBarHidden(true, animated: animated)
     }
 }

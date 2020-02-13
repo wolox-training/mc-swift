@@ -9,7 +9,7 @@
 import UIKit
 import WolmoCore
 
-class MainMenuController: UIViewController {
+class MainMenuController: BaseViewController {
     private let _view: MainMenuView = MainMenuView.loadFromNib()!
     private var booksArray: [Book] = []
     private static let cellIdentifier = "BookCell"
@@ -33,6 +33,13 @@ class MainMenuController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configureBooksTable()
+        configureNavigationBar()
+    }
+    
+    private func configureNavigationBar() {
+        navigationItem.title = "LIBRARY"
+        navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(named: "ic_notifications"), style: UIBarButtonItem.Style.plain, target: self, action: nil)
+        navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(named: "ic_search"), style: UIBarButtonItem.Style.plain, target: self, action: nil)
     }
 }
 
@@ -54,7 +61,7 @@ extension MainMenuController: UITableViewDelegate {
     }
     
     func tableView(_ booksTable: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 10
+        return 40
     }
 }
 
@@ -66,6 +73,7 @@ extension MainMenuController: UITableViewDataSource {
         _view.booksTable.dataSource = self
         _view.booksTable.register(UINib(nibName: "BookCell", bundle: nil), forCellReuseIdentifier: MainMenuController.cellIdentifier)
         _view.booksTable.rowHeight = UITableView.automaticDimension
+        _view.booksTable.showsVerticalScrollIndicator = false
     }
     
     private func createBooksArray() -> [Book] {
