@@ -30,6 +30,7 @@
 		B83388D921E93AAC00085E26 /* Runes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B83388D121E93AAC00085E26 /* Runes.framework */; };
 		CE11B45223EDC22D00D7439F /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE11B45123EDC22D00D7439F /* Colors.swift */; };
 		CE11B45723F2F9EB00D7439F /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE11B45623F2F9EB00D7439F /* BaseViewController.swift */; };
+		CE8E14B1240067690034DDB4 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = CE8E14B3240067690034DDB4 /* Localizable.strings */; };
 		CE93E56923C77B0F00232295 /* LandingScreenController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE93E56823C77B0F00232295 /* LandingScreenController.swift */; };
 		CE93E56B23C77E4900232295 /* LandingScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE93E56A23C77E4900232295 /* LandingScreenView.swift */; };
 		CEB6CB4D23CCF2AC00DB149D /* LandingScreenView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEB6CB4C23CCF2AC00DB149D /* LandingScreenView.xib */; };
@@ -106,6 +107,8 @@
 		B83388D121E93AAC00085E26 /* Runes.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Runes.framework; path = Carthage/Build/iOS/Runes.framework; sourceTree = "<group>"; };
 		CE11B45123EDC22D00D7439F /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		CE11B45623F2F9EB00D7439F /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		CE8E14B2240067690034DDB4 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		CE8E14B42400676E0034DDB4 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
 		CE93E56123C3CBCC00232295 /* Debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Debug.xcconfig; sourceTree = "<group>"; };
 		CE93E56223C3CBDE00232295 /* Alpha.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Alpha.xcconfig; sourceTree = "<group>"; };
 		CE93E56323C3CBF900232295 /* Release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Release.xcconfig; sourceTree = "<group>"; };
@@ -174,6 +177,7 @@
 		9D1574F81CB1B27500EA395E = {
 			isa = PBXGroup;
 			children = (
+				CE8E14B3240067690034DDB4 /* Localizable.strings */,
 				9D6E405F1CB1BA21008CE558 /* Frameworks */,
 				9D1575031CB1B27500EA395E /* WBooks */,
 				9D1575181CB1B27500EA395E /* WBooksTests */,
@@ -405,6 +409,7 @@
 			knownRegions = (
 				en,
 				Base,
+				es,
 			);
 			mainGroup = 9D1574F81CB1B27500EA395E;
 			productRefGroup = 9D1575021CB1B27500EA395E /* Products */;
@@ -423,6 +428,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE8E14B1240067690034DDB4 /* Localizable.strings in Resources */,
 				CEB6CB5B23CDA92F00DB149D /* BookCell.xib in Resources */,
 				CEB6CB4D23CCF2AC00DB149D /* LandingScreenView.xib in Resources */,
 				CEB6CB6023CE5A3100DB149D /* MainMenuView.xib in Resources */,
@@ -541,6 +547,18 @@
 			targetProxy = 9D1575211CB1B27500EA395E /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		CE8E14B3240067690034DDB4 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CE8E14B2240067690034DDB4 /* en */,
+				CE8E14B42400676E0034DDB4 /* es */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		CE39E8751D1DAED00004FE95 /* Debug */ = {
