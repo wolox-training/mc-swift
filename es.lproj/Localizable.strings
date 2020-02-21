@@ -5,3 +5,12 @@
   Created by Megan Cole on 21/02/2020.
   Copyright © 2020 Wolox. All rights reserved.
 */
+
+// MARK: - Landing Screen
+
+"LOGIN_BUTTON" = "INICIAR SESIÓN CON GOOGLE";
+"FOOTER_LABEL" = "Diseñado, desarrollado y usado por woloxers";
+
+// MARK: - Main Menu
+
+"MAIN_MENU_NAV_BAR_TITLE" = "BIBLIOTECA";
