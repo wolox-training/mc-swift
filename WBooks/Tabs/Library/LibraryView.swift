@@ -1,5 +1,5 @@
 //
-//  MainMenuView.swift
+//  LibraryView.swift
 //  WBooks
 //
 //  Created by Megan Cole on 14/01/2020.
@@ -9,7 +9,7 @@
 import SwiftUI
 import WolmoCore
 
-class MainMenuView: UIView, NibLoadable {
+class LibraryView: UIView, NibLoadable {
     @IBOutlet weak var booksTable: UITableView! {
         didSet {
             booksTable.backgroundColor = .backgroundColor()

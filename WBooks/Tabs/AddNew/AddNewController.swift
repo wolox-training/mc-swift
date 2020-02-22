@@ -25,7 +25,5 @@ class AddNewController: BaseViewController {
     
     private func configureNavigationBar() {
         navigationItem.title = "ADD_NEW_NAV_BAR_TITLE".localized()
-        navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(named: "ic_notifications"), style: UIBarButtonItem.Style.plain, target: self, action: nil)
-        navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(named: "ic_search"), style: UIBarButtonItem.Style.plain, target: self, action: nil)
     }
 }

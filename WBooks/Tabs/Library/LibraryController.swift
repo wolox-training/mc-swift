@@ -1,5 +1,5 @@
 //
-//  MainMenuController.swift
+//  LibraryController.swift
 //  WBooks
 //
 //  Created by Megan Cole on 14/01/2020.
@@ -9,8 +9,8 @@
 import UIKit
 import WolmoCore
 
-class MainMenuController: BaseViewController {
-    private let _view: MainMenuView = MainMenuView.loadFromNib()!
+class LibraryController: BaseViewController {
+    private let _view: LibraryView = LibraryView.loadFromNib()!
     private var booksArray: [Book] = []
     private static let cellIdentifier = "BookCell"
     
@@ -45,13 +45,13 @@ class MainMenuController: BaseViewController {
 }
 
 // MARK: - UITableViewDelegate
-extension MainMenuController: UITableViewDelegate {
+extension LibraryController: UITableViewDelegate {
     func tableView(_ booksTable: UITableView, numberOfRowsInSection section: Int) -> Int {
         booksArray.count
     }
 
     func tableView(_ booksTable: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = _view.booksTable.dequeueReusableCell(withIdentifier: MainMenuController.cellIdentifier) as? BookCell else { return UITableViewCell() }
+        guard let cell = _view.booksTable.dequeueReusableCell(withIdentifier: LibraryController.cellIdentifier) as? BookCell else { return UITableViewCell() }
         let book = booksArray[indexPath.row]
 
         cell.bookTitle.text = book.title
@@ -67,12 +67,12 @@ extension MainMenuController: UITableViewDelegate {
 }
 
 // MARK: - UITableViewDataSource
-extension MainMenuController: UITableViewDataSource {
+extension LibraryController: UITableViewDataSource {
     private func configureBooksTable() {
         booksArray = createBooksArray()
         _view.booksTable.delegate = self
         _view.booksTable.dataSource = self
-        _view.booksTable.register(UINib(nibName: "BookCell", bundle: nil), forCellReuseIdentifier: MainMenuController.cellIdentifier)
+        _view.booksTable.register(UINib(nibName: "BookCell", bundle: nil), forCellReuseIdentifier: LibraryController.cellIdentifier)
         _view.booksTable.rowHeight = UITableView.automaticDimension
         _view.booksTable.showsVerticalScrollIndicator = false
     }

@@ -15,41 +15,36 @@ class TabBarController: UITabBarController {
         
         tabBar.barTintColor = .white
         
-        let mainMenu = UINavigationController(rootViewController: MainMenuController())
-        mainMenu.tabBarItem = UITabBarItem()
-        mainMenu.tabBarItem.title = title
-        mainMenu.tabBarItem.image = UIImage(named: "ic_library.png")
-        mainMenu.tabBarItem.tag = 0
+        let library = UINavigationController(rootViewController: LibraryController())
+        library.tabBarItem = UITabBarItem()
+        library.tabBarItem.title = title
+        library.tabBarItem.image = UIImage(named: "ic_library.png")
+        library.tabBarItem.tag = 0
         
-//        let wishlist: WishlistController = WishlistController()
         let wishlist = UINavigationController(rootViewController: WishlistController())
         wishlist.tabBarItem = UITabBarItem()
         wishlist.tabBarItem.title = title
         wishlist.tabBarItem.image = UIImage(named: "ic_wishlist.png")
         wishlist.tabBarItem.tag = 1
         
-//        let addNew: AddNewController = AddNewController()
         let addNew = UINavigationController(rootViewController: AddNewController())
         addNew.tabBarItem = UITabBarItem()
         addNew.tabBarItem.title = title
         addNew.tabBarItem.image = UIImage(named: "ic_add_new.png")
         addNew.tabBarItem.tag = 2
 
-//        let rentals: RentalsController = RentalsController()
         let rentals = UINavigationController(rootViewController: RentalsController())
         rentals.tabBarItem = UITabBarItem()
         rentals.tabBarItem.title = title
         rentals.tabBarItem.image = UIImage(named: "ic_myrentals.png")
         rentals.tabBarItem.tag = 3
 
-//        let settings: SettingsController = SettingsController()
         let settings = UINavigationController(rootViewController: SettingsController())
         settings.tabBarItem = UITabBarItem()
         settings.tabBarItem.title = title
         settings.tabBarItem.image = UIImage(named: "ic_settings.png")
         settings.tabBarItem.tag = 4
 
-//        viewControllers = [mainMenu]
-        viewControllers = [mainMenu, wishlist, addNew, rentals, settings]
+        viewControllers = [library, wishlist, addNew, rentals, settings]
     }
 }
