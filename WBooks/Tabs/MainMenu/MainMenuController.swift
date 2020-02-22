@@ -34,6 +34,7 @@ class MainMenuController: BaseViewController {
         super.viewDidLoad()
         configureBooksTable()
         configureNavigationBar()
+        title = "LIBRARY"
     }
     
     private func configureNavigationBar() {

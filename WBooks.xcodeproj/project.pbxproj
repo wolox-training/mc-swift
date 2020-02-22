@@ -33,6 +33,18 @@
 		CE8E14B1240067690034DDB4 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = CE8E14B3240067690034DDB4 /* Localizable.strings */; };
 		CE8E14B724006FEF0034DDB4 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = CE8E14B924006FEF0034DDB4 /* InfoPlist.strings */; };
 		CE8E14BC2401B0BF0034DDB4 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8E14BB2401B0BF0034DDB4 /* TabBarController.swift */; };
+		CE8E14C42401C2050034DDB4 /* SettingsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8E14C22401C2050034DDB4 /* SettingsController.swift */; };
+		CE8E14C52401C2050034DDB4 /* SettingsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE8E14C32401C2050034DDB4 /* SettingsView.xib */; };
+		CE8E14C72401C2710034DDB4 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8E14C62401C2710034DDB4 /* SettingsView.swift */; };
+		CE8E14CA2401C2F90034DDB4 /* RentalsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8E14C82401C2F90034DDB4 /* RentalsController.swift */; };
+		CE8E14CB2401C2F90034DDB4 /* RentalsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE8E14C92401C2F90034DDB4 /* RentalsView.xib */; };
+		CE8E14D12401C9150034DDB4 /* RentalsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8E14D02401C9150034DDB4 /* RentalsView.swift */; };
+		CE8E14D42401C9550034DDB4 /* AddNewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8E14D22401C9550034DDB4 /* AddNewController.swift */; };
+		CE8E14D52401C9550034DDB4 /* AddNewView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE8E14D32401C9550034DDB4 /* AddNewView.xib */; };
+		CE8E14D72401C9650034DDB4 /* AddNewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8E14D62401C9650034DDB4 /* AddNewView.swift */; };
+		CE8E14DA2401C9770034DDB4 /* WishlistController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8E14D82401C9770034DDB4 /* WishlistController.swift */; };
+		CE8E14DB2401C9770034DDB4 /* WishlistView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE8E14D92401C9770034DDB4 /* WishlistView.xib */; };
+		CE8E14DD2401C9830034DDB4 /* WishlistView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8E14DC2401C9830034DDB4 /* WishlistView.swift */; };
 		CE93E56923C77B0F00232295 /* LandingScreenController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE93E56823C77B0F00232295 /* LandingScreenController.swift */; };
 		CE93E56B23C77E4900232295 /* LandingScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE93E56A23C77E4900232295 /* LandingScreenView.swift */; };
 		CEB6CB4D23CCF2AC00DB149D /* LandingScreenView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEB6CB4C23CCF2AC00DB149D /* LandingScreenView.xib */; };
@@ -114,6 +126,18 @@
 		CE8E14B824006FEF0034DDB4 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		CE8E14BA24006FF00034DDB4 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		CE8E14BB2401B0BF0034DDB4 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		CE8E14C22401C2050034DDB4 /* SettingsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsController.swift; sourceTree = "<group>"; };
+		CE8E14C32401C2050034DDB4 /* SettingsView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingsView.xib; sourceTree = "<group>"; };
+		CE8E14C62401C2710034DDB4 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		CE8E14C82401C2F90034DDB4 /* RentalsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RentalsController.swift; sourceTree = "<group>"; };
+		CE8E14C92401C2F90034DDB4 /* RentalsView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RentalsView.xib; sourceTree = "<group>"; };
+		CE8E14D02401C9150034DDB4 /* RentalsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RentalsView.swift; sourceTree = "<group>"; };
+		CE8E14D22401C9550034DDB4 /* AddNewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewController.swift; sourceTree = "<group>"; };
+		CE8E14D32401C9550034DDB4 /* AddNewView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddNewView.xib; sourceTree = "<group>"; };
+		CE8E14D62401C9650034DDB4 /* AddNewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewView.swift; sourceTree = "<group>"; };
+		CE8E14D82401C9770034DDB4 /* WishlistController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WishlistController.swift; sourceTree = "<group>"; };
+		CE8E14D92401C9770034DDB4 /* WishlistView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WishlistView.xib; sourceTree = "<group>"; };
+		CE8E14DC2401C9830034DDB4 /* WishlistView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WishlistView.swift; sourceTree = "<group>"; };
 		CE93E56123C3CBCC00232295 /* Debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Debug.xcconfig; sourceTree = "<group>"; };
 		CE93E56223C3CBDE00232295 /* Alpha.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Alpha.xcconfig; sourceTree = "<group>"; };
 		CE93E56323C3CBF900232295 /* Release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Release.xcconfig; sourceTree = "<group>"; };
@@ -182,9 +206,6 @@
 		9D1574F81CB1B27500EA395E = {
 			isa = PBXGroup;
 			children = (
-				CE8E14B924006FEF0034DDB4 /* InfoPlist.strings */,
-				CE8E14B3240067690034DDB4 /* Localizable.strings */,
-				CE8E14BB2401B0BF0034DDB4 /* TabBarController.swift */,
 				9D6E405F1CB1BA21008CE558 /* Frameworks */,
 				9D1575031CB1B27500EA395E /* WBooks */,
 				9D1575181CB1B27500EA395E /* WBooksTests */,
@@ -206,9 +227,8 @@
 		9D1575031CB1B27500EA395E /* WBooks */ = {
 			isa = PBXGroup;
 			children = (
+				CE8E14C12401C09A0034DDB4 /* Tabs */,
 				CEB6CB5C23CDAE8D00DB149D /* Models */,
-				CEB6CB5523CDA70F00DB149D /* BookCell */,
-				CEB6CB4E23CD9A4600DB149D /* MainMenu */,
 				CE93E56723C7795200232295 /* LandingScreen */,
 				CE93E55E23C3CB4700232295 /* ConfigurationFiles */,
 				E1530D9A1ED378F9002A9002 /* Services */,
@@ -218,6 +238,9 @@
 				CEB934DC1D21992100DF75C2 /* Environment.swift */,
 				CE11B45123EDC22D00D7439F /* Colors.swift */,
 				CE11B45623F2F9EB00D7439F /* BaseViewController.swift */,
+				CE8E14BB2401B0BF0034DDB4 /* TabBarController.swift */,
+				CE8E14B924006FEF0034DDB4 /* InfoPlist.strings */,
+				CE8E14B3240067690034DDB4 /* Localizable.strings */,
 			);
 			path = WBooks;
 			sourceTree = "<group>";
@@ -267,6 +290,58 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		CE8E14BD2401C0550034DDB4 /* Wishlist */ = {
+			isa = PBXGroup;
+			children = (
+				CE8E14D82401C9770034DDB4 /* WishlistController.swift */,
+				CE8E14D92401C9770034DDB4 /* WishlistView.xib */,
+				CE8E14DC2401C9830034DDB4 /* WishlistView.swift */,
+			);
+			path = Wishlist;
+			sourceTree = "<group>";
+		};
+		CE8E14BE2401C06D0034DDB4 /* AddNew */ = {
+			isa = PBXGroup;
+			children = (
+				CE8E14D22401C9550034DDB4 /* AddNewController.swift */,
+				CE8E14D32401C9550034DDB4 /* AddNewView.xib */,
+				CE8E14D62401C9650034DDB4 /* AddNewView.swift */,
+			);
+			path = AddNew;
+			sourceTree = "<group>";
+		};
+		CE8E14BF2401C0830034DDB4 /* Rentals */ = {
+			isa = PBXGroup;
+			children = (
+				CE8E14C82401C2F90034DDB4 /* RentalsController.swift */,
+				CE8E14C92401C2F90034DDB4 /* RentalsView.xib */,
+				CE8E14D02401C9150034DDB4 /* RentalsView.swift */,
+			);
+			path = Rentals;
+			sourceTree = "<group>";
+		};
+		CE8E14C02401C0930034DDB4 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				CE8E14C22401C2050034DDB4 /* SettingsController.swift */,
+				CE8E14C32401C2050034DDB4 /* SettingsView.xib */,
+				CE8E14C62401C2710034DDB4 /* SettingsView.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		CE8E14C12401C09A0034DDB4 /* Tabs */ = {
+			isa = PBXGroup;
+			children = (
+				CEB6CB4E23CD9A4600DB149D /* MainMenu */,
+				CE8E14C02401C0930034DDB4 /* Settings */,
+				CE8E14BF2401C0830034DDB4 /* Rentals */,
+				CE8E14BE2401C06D0034DDB4 /* AddNew */,
+				CE8E14BD2401C0550034DDB4 /* Wishlist */,
+			);
+			path = Tabs;
+			sourceTree = "<group>";
+		};
 		CE93E55E23C3CB4700232295 /* ConfigurationFiles */ = {
 			isa = PBXGroup;
 			children = (
@@ -291,9 +366,10 @@
 		CEB6CB4E23CD9A4600DB149D /* MainMenu */ = {
 			isa = PBXGroup;
 			children = (
+				CEB6CB5523CDA70F00DB149D /* BookCell */,
 				CEB6CB4F23CDA2A800DB149D /* MainMenuController.swift */,
-				CEB6CB5323CDA2C500DB149D /* MainMenuView.swift */,
 				CEB6CB5F23CE5A3100DB149D /* MainMenuView.xib */,
+				CEB6CB5323CDA2C500DB149D /* MainMenuView.swift */,
 			);
 			path = MainMenu;
 			sourceTree = "<group>";
@@ -435,11 +511,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE8E14DB2401C9770034DDB4 /* WishlistView.xib in Resources */,
 				CE8E14B1240067690034DDB4 /* Localizable.strings in Resources */,
 				CE8E14B724006FEF0034DDB4 /* InfoPlist.strings in Resources */,
+				CE8E14D52401C9550034DDB4 /* AddNewView.xib in Resources */,
 				CEB6CB5B23CDA92F00DB149D /* BookCell.xib in Resources */,
+				CE8E14CB2401C2F90034DDB4 /* RentalsView.xib in Resources */,
 				CEB6CB4D23CCF2AC00DB149D /* LandingScreenView.xib in Resources */,
 				CEB6CB6023CE5A3100DB149D /* MainMenuView.xib in Resources */,
+				CE8E14C52401C2050034DDB4 /* SettingsView.xib in Resources */,
 				9D15750C1CB1B27500EA395E /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -511,17 +591,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE8E14D12401C9150034DDB4 /* RentalsView.swift in Sources */,
 				CEB934DD1D21992100DF75C2 /* Environment.swift in Sources */,
+				CE8E14DA2401C9770034DDB4 /* WishlistController.swift in Sources */,
+				CE8E14DD2401C9830034DDB4 /* WishlistView.swift in Sources */,
+				CE8E14D42401C9550034DDB4 /* AddNewController.swift in Sources */,
+				CE8E14C42401C2050034DDB4 /* SettingsController.swift in Sources */,
 				CE11B45223EDC22D00D7439F /* Colors.swift in Sources */,
 				CE11B45723F2F9EB00D7439F /* BaseViewController.swift in Sources */,
 				CEB6CB5423CDA2C500DB149D /* MainMenuView.swift in Sources */,
 				CE93E56B23C77E4900232295 /* LandingScreenView.swift in Sources */,
 				E1530D9C1ED37905002A9002 /* RollbarService.swift in Sources */,
+				CE8E14C72401C2710034DDB4 /* SettingsView.swift in Sources */,
 				CEB6CB5723CDA76300DB149D /* BookCell.swift in Sources */,
 				CEB6CB5E23CDAE9C00DB149D /* Book.swift in Sources */,
 				CE93E56923C77B0F00232295 /* LandingScreenController.swift in Sources */,
 				CE8E14BC2401B0BF0034DDB4 /* TabBarController.swift in Sources */,
 				9D1575051CB1B27500EA395E /* AppDelegate.swift in Sources */,
+				CE8E14D72401C9650034DDB4 /* AddNewView.swift in Sources */,
+				CE8E14CA2401C2F90034DDB4 /* RentalsController.swift in Sources */,
 				CEB6CB5123CDA2A800DB149D /* MainMenuController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
