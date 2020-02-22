@@ -32,6 +32,7 @@
 		CE11B45723F2F9EB00D7439F /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE11B45623F2F9EB00D7439F /* BaseViewController.swift */; };
 		CE8E14B1240067690034DDB4 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = CE8E14B3240067690034DDB4 /* Localizable.strings */; };
 		CE8E14B724006FEF0034DDB4 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = CE8E14B924006FEF0034DDB4 /* InfoPlist.strings */; };
+		CE8E14BC2401B0BF0034DDB4 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8E14BB2401B0BF0034DDB4 /* TabBarController.swift */; };
 		CE93E56923C77B0F00232295 /* LandingScreenController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE93E56823C77B0F00232295 /* LandingScreenController.swift */; };
 		CE93E56B23C77E4900232295 /* LandingScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE93E56A23C77E4900232295 /* LandingScreenView.swift */; };
 		CEB6CB4D23CCF2AC00DB149D /* LandingScreenView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEB6CB4C23CCF2AC00DB149D /* LandingScreenView.xib */; };
@@ -112,6 +113,7 @@
 		CE8E14B42400676E0034DDB4 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
 		CE8E14B824006FEF0034DDB4 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		CE8E14BA24006FF00034DDB4 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		CE8E14BB2401B0BF0034DDB4 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		CE93E56123C3CBCC00232295 /* Debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Debug.xcconfig; sourceTree = "<group>"; };
 		CE93E56223C3CBDE00232295 /* Alpha.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Alpha.xcconfig; sourceTree = "<group>"; };
 		CE93E56323C3CBF900232295 /* Release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Release.xcconfig; sourceTree = "<group>"; };
@@ -182,6 +184,7 @@
 			children = (
 				CE8E14B924006FEF0034DDB4 /* InfoPlist.strings */,
 				CE8E14B3240067690034DDB4 /* Localizable.strings */,
+				CE8E14BB2401B0BF0034DDB4 /* TabBarController.swift */,
 				9D6E405F1CB1BA21008CE558 /* Frameworks */,
 				9D1575031CB1B27500EA395E /* WBooks */,
 				9D1575181CB1B27500EA395E /* WBooksTests */,
@@ -517,6 +520,7 @@
 				CEB6CB5723CDA76300DB149D /* BookCell.swift in Sources */,
 				CEB6CB5E23CDAE9C00DB149D /* Book.swift in Sources */,
 				CE93E56923C77B0F00232295 /* LandingScreenController.swift in Sources */,
+				CE8E14BC2401B0BF0034DDB4 /* TabBarController.swift in Sources */,
 				9D1575051CB1B27500EA395E /* AppDelegate.swift in Sources */,
 				CEB6CB5123CDA2A800DB149D /* MainMenuController.swift in Sources */,
 			);
