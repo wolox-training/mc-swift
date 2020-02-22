@@ -227,6 +227,7 @@
 		9D1575031CB1B27500EA395E /* WBooks */ = {
 			isa = PBXGroup;
 			children = (
+				CE8E14DE2401D7220034DDB4 /* Locales */,
 				CE8E14C12401C09A0034DDB4 /* Tabs */,
 				CEB6CB5C23CDAE8D00DB149D /* Models */,
 				CE93E56723C7795200232295 /* LandingScreen */,
@@ -239,8 +240,6 @@
 				CE11B45123EDC22D00D7439F /* Colors.swift */,
 				CE11B45623F2F9EB00D7439F /* BaseViewController.swift */,
 				CE8E14BB2401B0BF0034DDB4 /* TabBarController.swift */,
-				CE8E14B924006FEF0034DDB4 /* InfoPlist.strings */,
-				CE8E14B3240067690034DDB4 /* Localizable.strings */,
 			);
 			path = WBooks;
 			sourceTree = "<group>";
@@ -338,6 +337,23 @@
 				CE8E14BF2401C0830034DDB4 /* Rentals */,
 				CE8E14BE2401C06D0034DDB4 /* AddNew */,
 				CE8E14BD2401C0550034DDB4 /* Wishlist */,
+			);
+			path = Tabs;
+			sourceTree = "<group>";
+		};
+		CE8E14DE2401D7220034DDB4 /* Locales */ = {
+			isa = PBXGroup;
+			children = (
+				CE8E14DF2401D74A0034DDB4 /* Tabs */,
+				CE8E14B924006FEF0034DDB4 /* InfoPlist.strings */,
+				CE8E14B3240067690034DDB4 /* Localizable.strings */,
+			);
+			path = Locales;
+			sourceTree = "<group>";
+		};
+		CE8E14DF2401D74A0034DDB4 /* Tabs */ = {
+			isa = PBXGroup;
+			children = (
 			);
 			path = Tabs;
 			sourceTree = "<group>";

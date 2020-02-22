@@ -33,8 +33,8 @@ class MainMenuController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configureBooksTable()
+        title = "MAIN_MENU_TAB_BAR_TITLE".localized()
         configureNavigationBar()
-        title = "LIBRARY"
     }
     
     private func configureNavigationBar() {
