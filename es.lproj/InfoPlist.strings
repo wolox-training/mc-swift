@@ -1,4 +1,4 @@
-/* 
+/*
   InfoPlist.strings
   WBooks
 
@@ -6,4 +6,5 @@
   Copyright © 2020 Wolox. All rights reserved.
 */
 
-CFBundleDisplayName = "WLibros"
+CFBundleDisplayName = "WLibros";
+CFBundleName = "WLibros";
