@@ -12,4 +12,10 @@ struct Book {
     var title: String
     var author: String
     var cover: UIImage
+    
+    init(title: String, author: String, cover: UIImage) {
+        self.title = title
+        self.author = author
+        self.cover = cover
+    }
 }
