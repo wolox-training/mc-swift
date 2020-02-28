@@ -20,7 +20,7 @@ class TabBarController: UITabBarController {
         tabBar.tintColor = .systemBlue
         tabBar.unselectedItemTintColor = .gray
 
-        let library = UINavigationController(rootViewController: LibraryController())
+        let library = UINavigationController(rootViewController: LibraryController(viewModel: LibraryViewModel()))
         library.tabBarItem = UITabBarItem()
         library.tabBarItem.title = "LIBRARY_TAB_BAR_TITLE".localized()
         library.tabBarItem.image = UIImage.libraryActive
