@@ -45,10 +45,13 @@ class LibraryController: BaseViewController {
 
 // MARK: - UITableViewDelegate
 extension LibraryController: UITableViewDelegate {
-    func tableView(_ booksTable: UITableView, numberOfRowsInSection section: Int) -> Int {
-        booksArray.count
+    func tableView(_ booksTable: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 40
     }
+}
 
+// MARK: - UITableViewDataSource
+extension LibraryController: UITableViewDataSource {
     func tableView(_ booksTable: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = _view.booksTable.dequeueReusableCell(withIdentifier: LibraryController.cellIdentifier) as? BookCell else { return UITableViewCell() }
         let book = booksArray[indexPath.row]
@@ -59,14 +62,14 @@ extension LibraryController: UITableViewDelegate {
 
         return cell
     }
-    
-    func tableView(_ booksTable: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 40
+
+    func tableView(_ booksTable: UITableView, numberOfRowsInSection section: Int) -> Int {
+        booksArray.count
     }
 }
 
-// MARK: - UITableViewDataSource
-extension LibraryController: UITableViewDataSource {
+// MARK: - Private
+extension LibraryController {
     private func configureBooksTable() {
         booksArray = createBooksArray()
         _view.booksTable.delegate = self
