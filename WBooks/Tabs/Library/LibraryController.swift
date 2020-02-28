@@ -33,14 +33,13 @@ class LibraryController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configureBooksTable()
-        title = "MAIN_MENU_TAB_BAR_TITLE".localized()
         configureNavigationBar()
     }
     
     private func configureNavigationBar() {
         navigationItem.title = "MAIN_MENU_NAV_BAR_TITLE".localized()
-        navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(named: "ic_notifications"), style: UIBarButtonItem.Style.plain, target: self, action: nil)
-        navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(named: "ic_search"), style: UIBarButtonItem.Style.plain, target: self, action: nil)
+        navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage.notifications, style: UIBarButtonItem.Style.plain, target: self, action: nil)
+        navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage.search, style: UIBarButtonItem.Style.plain, target: self, action: nil)
     }
 }
 
@@ -79,12 +78,12 @@ extension LibraryController: UITableViewDataSource {
     
     private func createBooksArray() -> [Book] {
         var books: [Book] = []
-        books.append(Book(title: "A Little Bird Told Me", author: "Timothy Cross", cover: #imageLiteral(resourceName: "img_book1")))
-        books.append(Book(title: "When The Doves Disappeared", author: "Sofi Oksanen", cover: #imageLiteral(resourceName: "img_book2")))
-        books.append(Book(title: "The Best Book In The World", author: "Peter Sjernstrom", cover: #imageLiteral(resourceName: "img_book3")))
-        books.append(Book(title: "Be Creative", author: "Tony Alcazar", cover: #imageLiteral(resourceName: "img_book4")))
-        books.append(Book(title: "Redesign The Web", author: "Liliana Castilla", cover: #imageLiteral(resourceName: "img_book5")))
-        books.append(Book(title: "The Yellow Book", author: "Big bird", cover: #imageLiteral(resourceName: "img_book6")))
+        books.append(Book(title: "A Little Bird Told Me", author: "Timothy Cross", cover: UIImage.book1))
+        books.append(Book(title: "When The Doves Disappeared", author: "Sofi Oksanen", cover: UIImage.book2))
+        books.append(Book(title: "The Best Book In The World", author: "Peter Sjernstrom", cover: UIImage.book3))
+        books.append(Book(title: "Be Creative", author: "Tony Alcazar", cover: UIImage.book4))
+        books.append(Book(title: "Redesign The Web", author: "Liliana Castilla", cover: UIImage.book5))
+        books.append(Book(title: "The Yellow Book", author: "Big bird", cover: UIImage.book6))
 
         return books
     }

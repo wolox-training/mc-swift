@@ -19,7 +19,6 @@ class WishlistController: BaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = "WISHLIST_TAB_BAR_TITLE".localized()
         configureNavigationBar()
     }
     

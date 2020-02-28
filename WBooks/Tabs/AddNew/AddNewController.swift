@@ -19,7 +19,6 @@ class AddNewController: BaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = "ADD_NEW_TAB_BAR_TITLE".localized()
         configureNavigationBar()
     }
     

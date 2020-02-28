@@ -19,7 +19,6 @@ class RentalsController: BaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = "RENTALS_TAB_BAR_TITLE".localized()
         configureNavigationBar()
     }
     

@@ -9,40 +9,45 @@
 import UIKit
 
 class TabBarController: UITabBarController {
+    
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        tabBar.barTintColor = .white
-        
+        tabBar.tintColor = .systemBlue
+        tabBar.unselectedItemTintColor = .gray
+
         let library = UINavigationController(rootViewController: LibraryController())
         library.tabBarItem = UITabBarItem()
-        library.tabBarItem.title = title
-        library.tabBarItem.image = UIImage(named: "ic_library.png")
+        library.tabBarItem.title = "MAIN_MENU_TAB_BAR_TITLE".localized()
+        library.tabBarItem.image = UIImage.libraryActive
         library.tabBarItem.tag = 0
         
         let wishlist = UINavigationController(rootViewController: WishlistController())
         wishlist.tabBarItem = UITabBarItem()
-        wishlist.tabBarItem.title = title
-        wishlist.tabBarItem.image = UIImage(named: "ic_wishlist.png")
+        wishlist.tabBarItem.title = "WISHLIST_TAB_BAR_TITLE".localized()
+        wishlist.tabBarItem.image = UIImage.wishlistActive
         wishlist.tabBarItem.tag = 1
         
         let addNew = UINavigationController(rootViewController: AddNewController())
         addNew.tabBarItem = UITabBarItem()
-        addNew.tabBarItem.title = title
-        addNew.tabBarItem.image = UIImage(named: "ic_add_new.png")
+        addNew.tabBarItem.title = "ADD_NEW_TAB_BAR_TITLE".localized()
+        addNew.tabBarItem.image = UIImage.addNewActive
         addNew.tabBarItem.tag = 2
 
         let rentals = UINavigationController(rootViewController: RentalsController())
         rentals.tabBarItem = UITabBarItem()
-        rentals.tabBarItem.title = title
-        rentals.tabBarItem.image = UIImage(named: "ic_myrentals.png")
+        rentals.tabBarItem.title = "RENTALS_TAB_BAR_TITLE".localized()
+        rentals.tabBarItem.image = UIImage.rentalsActive
         rentals.tabBarItem.tag = 3
 
         let settings = UINavigationController(rootViewController: SettingsController())
         settings.tabBarItem = UITabBarItem()
-        settings.tabBarItem.title = title
-        settings.tabBarItem.image = UIImage(named: "ic_settings.png")
+        settings.tabBarItem.title = "SETTINGS_TAB_BAR_TITLE".localized()
+        settings.tabBarItem.image = UIImage.settingsActive
         settings.tabBarItem.tag = 4
 
         viewControllers = [library, wishlist, addNew, rentals, settings]

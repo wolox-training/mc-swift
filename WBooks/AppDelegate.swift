@@ -30,7 +30,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         NetworkActivityLogger.shared.level = .debug
         NetworkActivityLogger.shared.startLogging()
-        
+                
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.rootViewController = LandingScreenController()
         window?.makeKeyAndVisible()

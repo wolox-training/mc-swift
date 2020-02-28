@@ -18,7 +18,6 @@ class SettingsController: BaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = "SETTINGS_TAB_BAR_TITLE".localized()
         configureNavigationBar()
     }
     
