@@ -1,0 +1,37 @@
+/* 
+  Localizable.strings
+  WBooks
+
+  Created by Megan Cole on 21/02/2020.
+  Copyright © 2020 Wolox. All rights reserved.
+*/
+
+// MARK: - Landing Screen
+
+"LOGIN_BUTTON" = "SIGN IN WITH GOOGLE";
+"FOOTER_LABEL" = "Designed, developed and used by woloxers";
+
+// MARK: - Library
+
+"LIBRARY_NAV_BAR_TITLE" = "LIBRARY";
+"LIBRARY_TAB_BAR_TITLE" = "Library";
+
+// MARK: - Settings
+
+"SETTINGS_NAV_BAR_TITLE" = "SETTINGS";
+"SETTINGS_TAB_BAR_TITLE" = "Settings";
+
+// MARK: - Rentals
+
+"RENTALS_NAV_BAR_TITLE" = "RENTALS";
+"RENTALS_TAB_BAR_TITLE" = "Rentals";
+
+// MARK: - Add New
+
+"ADD_NEW_NAV_BAR_TITLE" = "ADD NEW";
+"ADD_NEW_TAB_BAR_TITLE" = "Add New";
+
+// MARK: - Wishlist
+
+"WISHLIST_NAV_BAR_TITLE" = "WISHLIST";
+"WISHLIST_TAB_BAR_TITLE" = "Wishlist";
