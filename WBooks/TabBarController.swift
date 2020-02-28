@@ -22,7 +22,7 @@ class TabBarController: UITabBarController {
 
         let library = UINavigationController(rootViewController: LibraryController())
         library.tabBarItem = UITabBarItem()
-        library.tabBarItem.title = "MAIN_MENU_TAB_BAR_TITLE".localized()
+        library.tabBarItem.title = "LIBRARY_TAB_BAR_TITLE".localized()
         library.tabBarItem.image = UIImage.libraryActive
         library.tabBarItem.tag = 0
         

@@ -13,8 +13,8 @@
 
 // MARK: - Main Menu
 
-"MAIN_MENU_NAV_BAR_TITLE" = "LIBRARY";
-"MAIN_MENU_TAB_BAR_TITLE" = "Library";
+"LIBRARY_NAV_BAR_TITLE" = "LIBRARY";
+"LIBRARY_TAB_BAR_TITLE" = "Library";
 
 // MARK: - Settings
 
