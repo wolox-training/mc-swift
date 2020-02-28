@@ -34,7 +34,6 @@ class LandingScreenController: UIViewController {
     }
 
     @objc private func loginWithGoogle() {
-//        self.navigationController?.pushViewController(MainMenuController(), animated: true)
         let homeViewController = TabBarController()
         homeViewController.modalPresentationStyle = .fullScreen
         present(homeViewController, animated: true, completion: nil)
