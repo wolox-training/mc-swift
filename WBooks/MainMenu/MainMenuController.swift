@@ -37,7 +37,7 @@ class MainMenuController: BaseViewController {
     }
     
     private func configureNavigationBar() {
-        navigationItem.title = "LIBRARY"
+        navigationItem.title = "MAIN_MENU_NAV_BAR_TITLE".localized()
         navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(named: "ic_notifications"), style: UIBarButtonItem.Style.plain, target: self, action: nil)
         navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(named: "ic_search"), style: UIBarButtonItem.Style.plain, target: self, action: nil)
     }
