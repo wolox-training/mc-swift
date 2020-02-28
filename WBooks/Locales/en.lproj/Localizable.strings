@@ -11,7 +11,7 @@
 "LOGIN_BUTTON" = "SIGN IN WITH GOOGLE";
 "FOOTER_LABEL" = "Designed, developed and used by woloxers";
 
-// MARK: - Main Menu
+// MARK: - Library
 
 "LIBRARY_NAV_BAR_TITLE" = "LIBRARY";
 "LIBRARY_TAB_BAR_TITLE" = "Library";

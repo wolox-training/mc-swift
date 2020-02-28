@@ -11,10 +11,10 @@
 "LOGIN_BUTTON" = "INGRESAR CON GOOGLE";
 "FOOTER_LABEL" = "Diseñado, desarrollado y usado por woloxers";
 
-// MARK: - Main Menu
+// MARK: - Library
 
-"MAIN_MENU_NAV_BAR_TITLE" = "BIBLIOTECA";
-"MAIN_MENU_TAB_BAR_TITLE" = "Biblioteca";
+"LIBRARY_NAV_BAR_TITLE" = "BIBLIOTECA";
+"LIBRARY_TAB_BAR_TITLE" = "Biblioteca";
 
 // MARK: - Settings
 
