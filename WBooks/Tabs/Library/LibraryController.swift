@@ -11,7 +11,7 @@ import WolmoCore
 
 class LibraryController: BaseViewController {
     private let _view: LibraryView = LibraryView.loadFromNib()!
-    private var booksArray: [Book] = []
+    private var _viewModel: LibraryViewModel
     private static let cellIdentifier = "BookCell"
     
     required public init?(coder aDecoder: NSCoder) {
@@ -22,7 +22,8 @@ class LibraryController: BaseViewController {
         fatalError("init(nibName:bundle:) has not been implemented")
     }
 
-    init() {
+    init(viewModel: LibraryViewModel) {
+        _viewModel = viewModel
         super.init(nibName: .none, bundle: .none)
     }
 
@@ -54,7 +55,7 @@ extension LibraryController: UITableViewDelegate {
 extension LibraryController: UITableViewDataSource {
     func tableView(_ booksTable: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = _view.booksTable.dequeueReusableCell(withIdentifier: LibraryController.cellIdentifier) as? BookCell else { return UITableViewCell() }
-        let book = booksArray[indexPath.row]
+        let book = _viewModel.books[indexPath.row]
 
         cell.bookTitle.text = book.title
         cell.bookAuthor.text = book.author
@@ -64,30 +65,17 @@ extension LibraryController: UITableViewDataSource {
     }
 
     func tableView(_ booksTable: UITableView, numberOfRowsInSection section: Int) -> Int {
-        booksArray.count
+        _viewModel.numberOfCells()
     }
 }
 
 // MARK: - Private
 extension LibraryController {
     private func configureBooksTable() {
-        booksArray = createBooksArray()
         _view.booksTable.delegate = self
         _view.booksTable.dataSource = self
         _view.booksTable.register(UINib(nibName: "BookCell", bundle: nil), forCellReuseIdentifier: LibraryController.cellIdentifier)
         _view.booksTable.rowHeight = UITableView.automaticDimension
         _view.booksTable.showsVerticalScrollIndicator = false
-    }
-    
-    private func createBooksArray() -> [Book] {
-        var books: [Book] = []
-        books.append(Book(title: "A Little Bird Told Me", author: "Timothy Cross", cover: UIImage.book1))
-        books.append(Book(title: "When The Doves Disappeared", author: "Sofi Oksanen", cover: UIImage.book2))
-        books.append(Book(title: "The Best Book In The World", author: "Peter Sjernstrom", cover: UIImage.book3))
-        books.append(Book(title: "Be Creative", author: "Tony Alcazar", cover: UIImage.book4))
-        books.append(Book(title: "Redesign The Web", author: "Liliana Castilla", cover: UIImage.book5))
-        books.append(Book(title: "The Yellow Book", author: "Big bird", cover: UIImage.book6))
-
-        return books
     }
 }

@@ -30,6 +30,8 @@
 		B83388D921E93AAC00085E26 /* Runes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B83388D121E93AAC00085E26 /* Runes.framework */; };
 		CE11B45223EDC22D00D7439F /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE11B45123EDC22D00D7439F /* Colors.swift */; };
 		CE11B45723F2F9EB00D7439F /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE11B45623F2F9EB00D7439F /* BaseViewController.swift */; };
+		CE6FA6562409ACE800772E9F /* BookViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6FA6552409ACE800772E9F /* BookViewModel.swift */; };
+		CE6FA6582409AF2000772E9F /* LibraryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6FA6572409AF2000772E9F /* LibraryViewModel.swift */; };
 		CE8E14B1240067690034DDB4 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = CE8E14B3240067690034DDB4 /* Localizable.strings */; };
 		CE8E14B724006FEF0034DDB4 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = CE8E14B924006FEF0034DDB4 /* InfoPlist.strings */; };
 		CE8E14BC2401B0BF0034DDB4 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8E14BB2401B0BF0034DDB4 /* TabBarController.swift */; };
@@ -122,6 +124,8 @@
 		B83388D121E93AAC00085E26 /* Runes.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Runes.framework; path = Carthage/Build/iOS/Runes.framework; sourceTree = "<group>"; };
 		CE11B45123EDC22D00D7439F /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		CE11B45623F2F9EB00D7439F /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		CE6FA6552409ACE800772E9F /* BookViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookViewModel.swift; sourceTree = "<group>"; };
+		CE6FA6572409AF2000772E9F /* LibraryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryViewModel.swift; sourceTree = "<group>"; };
 		CE8E14B2240067690034DDB4 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		CE8E14B42400676E0034DDB4 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
 		CE8E14B824006FEF0034DDB4 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -389,6 +393,7 @@
 				CEB6CB4F23CDA2A800DB149D /* LibraryController.swift */,
 				CEB6CB5F23CE5A3100DB149D /* LibraryView.xib */,
 				CEB6CB5323CDA2C500DB149D /* LibraryView.swift */,
+				CE6FA6572409AF2000772E9F /* LibraryViewModel.swift */,
 			);
 			path = Library;
 			sourceTree = "<group>";
@@ -406,6 +411,7 @@
 			isa = PBXGroup;
 			children = (
 				CEB6CB5D23CDAE9C00DB149D /* Book.swift */,
+				CE6FA6552409ACE800772E9F /* BookViewModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -615,6 +621,8 @@
 				CE8E14DA2401C9770034DDB4 /* WishlistController.swift in Sources */,
 				CE8E14DD2401C9830034DDB4 /* WishlistView.swift in Sources */,
 				CE8E14D42401C9550034DDB4 /* AddNewController.swift in Sources */,
+				CE6FA6562409ACE800772E9F /* BookViewModel.swift in Sources */,
+				CE6FA6582409AF2000772E9F /* LibraryViewModel.swift in Sources */,
 				CE8E14C42401C2050034DDB4 /* SettingsController.swift in Sources */,
 				CE11B45223EDC22D00D7439F /* Colors.swift in Sources */,
 				CE8E14E224021DD00034DDB4 /* Images.swift in Sources */,
