@@ -8,6 +8,7 @@
 
 import UIKit
 import WolmoCore
+import Kingfisher
 
 class LibraryController: BaseViewController {
     private let _view: LibraryView = LibraryView.loadFromNib()!
@@ -33,6 +34,12 @@ class LibraryController: BaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        _viewModel.onUpdate = { [weak self] () in
+            DispatchQueue.main.async {
+                self?._view.booksTable.reloadData()
+            }
+        }
+        _viewModel.getBookList()
         configureBooksTable()
         configureNavigationBar()
     }
@@ -59,7 +66,13 @@ extension LibraryController: UITableViewDataSource {
 
         cell.bookTitle.text = book.title
         cell.bookAuthor.text = book.author
-        cell.bookCover.image = book.cover
+        if let url = URL(string: book.image) {
+            let resource = ImageResource(downloadURL: url)
+            cell.bookCover.kf.indicatorType = .activity
+            cell.bookCover.kf.setImage(with: resource)
+        } else {
+            cell.bookCover.image = UIImage.book1
+        }
 
         return cell
     }

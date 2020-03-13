@@ -9,16 +9,29 @@
 import UIKit
 
 class LibraryViewModel {
-    public let books: [BookViewModel] = [
-        BookViewModel(book: Book(title: "A Little Bird Told Me", author: "Timothy Cross", cover: UIImage.book1)),
-        BookViewModel(book: Book(title: "When The Doves Disappeared", author: "Sofi Oksanen", cover: UIImage.book2)),
-        BookViewModel(book: Book(title: "The Best Book In The World", author: "Peter Sjernstrom", cover: UIImage.book3)),
-        BookViewModel(book: Book(title: "Be Creative", author: "Tony Alcazar", cover: UIImage.book4)),
-        BookViewModel(book: Book(title: "Redesign The Web", author: "Liliana Castilla", cover: UIImage.book5)),
-        BookViewModel(book: Book(title: "The Yellow Book", author: "Big bird", cover: UIImage.book6))
-    ]
+    private var bookRepository = BookRepository()
+
+    public var books: [Book] = [] {
+        didSet {
+            onUpdate?()
+        }
+    }
     
+    var onUpdate: (() -> Void)?
+
     public func numberOfCells() -> Int {
         return books.count
+    }
+    
+    func getBookList() {
+        bookRepository.fetchBooks(onSuccess: { [weak self] (books) in
+            self?.books = books
+        }, onError: { (error) in
+            print(error)
+        })
+    }
+
+    func getCellBook(at indexPath: IndexPath) -> Book {
+        return books[indexPath.row]
     }
 }

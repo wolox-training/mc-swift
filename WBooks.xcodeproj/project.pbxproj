@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -32,6 +32,7 @@
 		CE11B45723F2F9EB00D7439F /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE11B45623F2F9EB00D7439F /* BaseViewController.swift */; };
 		CE6FA6562409ACE800772E9F /* BookViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6FA6552409ACE800772E9F /* BookViewModel.swift */; };
 		CE6FA6582409AF2000772E9F /* LibraryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6FA6572409AF2000772E9F /* LibraryViewModel.swift */; };
+		CE6FA65B2409B7BD00772E9F /* BookRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6FA65A2409B7BD00772E9F /* BookRepository.swift */; };
 		CE8E14B1240067690034DDB4 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = CE8E14B3240067690034DDB4 /* Localizable.strings */; };
 		CE8E14B724006FEF0034DDB4 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = CE8E14B924006FEF0034DDB4 /* InfoPlist.strings */; };
 		CE8E14BC2401B0BF0034DDB4 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8E14BB2401B0BF0034DDB4 /* TabBarController.swift */; };
@@ -50,6 +51,7 @@
 		CE8E14E224021DD00034DDB4 /* Images.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8E14E124021DD00034DDB4 /* Images.swift */; };
 		CE93E56923C77B0F00232295 /* LandingScreenController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE93E56823C77B0F00232295 /* LandingScreenController.swift */; };
 		CE93E56B23C77E4900232295 /* LandingScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE93E56A23C77E4900232295 /* LandingScreenView.swift */; };
+		CEB208C9241C37DB0069DD48 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = CEB208C8241C37DB0069DD48 /* Kingfisher */; };
 		CEB6CB4D23CCF2AC00DB149D /* LandingScreenView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEB6CB4C23CCF2AC00DB149D /* LandingScreenView.xib */; };
 		CEB6CB5123CDA2A800DB149D /* LibraryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB6CB4F23CDA2A800DB149D /* LibraryController.swift */; };
 		CEB6CB5423CDA2C500DB149D /* LibraryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB6CB5323CDA2C500DB149D /* LibraryView.swift */; };
@@ -126,6 +128,7 @@
 		CE11B45623F2F9EB00D7439F /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		CE6FA6552409ACE800772E9F /* BookViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookViewModel.swift; sourceTree = "<group>"; };
 		CE6FA6572409AF2000772E9F /* LibraryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryViewModel.swift; sourceTree = "<group>"; };
+		CE6FA65A2409B7BD00772E9F /* BookRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookRepository.swift; sourceTree = "<group>"; };
 		CE8E14B2240067690034DDB4 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		CE8E14B42400676E0034DDB4 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
 		CE8E14B824006FEF0034DDB4 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -185,6 +188,7 @@
 				B83388D521E93AAC00085E26 /* Argo.framework in Frameworks */,
 				B83388D621E93AAC00085E26 /* AlamofireNetworkActivityLogger.framework in Frameworks */,
 				B83388D721E93AAC00085E26 /* AlamofireNetworkActivityIndicator.framework in Frameworks */,
+				CEB208C9241C37DB0069DD48 /* Kingfisher in Frameworks */,
 				B83388D821E93AAC00085E26 /* Alamofire.framework in Frameworks */,
 				B83388D921E93AAC00085E26 /* Runes.framework in Frameworks */,
 			);
@@ -233,6 +237,7 @@
 		9D1575031CB1B27500EA395E /* WBooks */ = {
 			isa = PBXGroup;
 			children = (
+				CE6FA6592409B77B00772E9F /* Repositories */,
 				CE8E14E024021D950034DDB4 /* Extensions */,
 				CE8E14DE2401D7220034DDB4 /* Locales */,
 				CE8E14C12401C09A0034DDB4 /* Tabs */,
@@ -293,6 +298,14 @@
 				9D6E40561CB1B93A008CE558 /* Result.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CE6FA6592409B77B00772E9F /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				CE6FA65A2409B7BD00772E9F /* BookRepository.swift */,
+			);
+			path = Repositories;
 			sourceTree = "<group>";
 		};
 		CE8E14BD2401C0550034DDB4 /* Wishlist */ = {
@@ -442,6 +455,9 @@
 			dependencies = (
 			);
 			name = WBooks;
+			packageProductDependencies = (
+				CEB208C8241C37DB0069DD48 /* Kingfisher */,
+			);
 			productName = WBooks;
 			productReference = 9D1575011CB1B27500EA395E /* WBooks.app */;
 			productType = "com.apple.product-type.application";
@@ -520,6 +536,9 @@
 				es,
 			);
 			mainGroup = 9D1574F81CB1B27500EA395E;
+			packageReferences = (
+				CEB208C7241C37DB0069DD48 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+			);
 			productRefGroup = 9D1575021CB1B27500EA395E /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -618,6 +637,7 @@
 			files = (
 				CE8E14D12401C9150034DDB4 /* RentalsView.swift in Sources */,
 				CEB934DD1D21992100DF75C2 /* Environment.swift in Sources */,
+				CE6FA65B2409B7BD00772E9F /* BookRepository.swift in Sources */,
 				CE8E14DA2401C9770034DDB4 /* WishlistController.swift in Sources */,
 				CE8E14DD2401C9830034DDB4 /* WishlistView.swift in Sources */,
 				CE8E14D42401C9550034DDB4 /* AddNewController.swift in Sources */,
@@ -758,7 +778,10 @@
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = WBooks/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_SWIFT_FLAGS = "-D DEBUG";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Wolox.WBooks.debug;
@@ -779,7 +802,11 @@
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = WBooksTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.Wolox.WBooksTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -791,7 +818,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				INFOPLIST_FILE = WBooksUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.Wolox.WBooksUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -861,13 +892,17 @@
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = WBooks/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				ONLY_ACTIVE_ARCH = NO;
 				OTHER_SWIFT_FLAGS = "-D ALPHA";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Wolox.WBooks.alpha;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
@@ -882,7 +917,11 @@
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = WBooksTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.Wolox.WBooksTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -894,7 +933,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				INFOPLIST_FILE = WBooksUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.Wolox.WBooksUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -946,7 +989,8 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -964,12 +1008,16 @@
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = WBooks/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				OTHER_SWIFT_FLAGS = "-D RELEASE";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Wolox.WBooks;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
@@ -984,7 +1032,11 @@
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = WBooksTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.Wolox.WBooksTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -996,7 +1048,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				INFOPLIST_FILE = WBooksUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.Wolox.WBooksUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -1065,12 +1121,16 @@
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = WBooks/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				OTHER_SWIFT_FLAGS = "-D PRODUCTION";
 				PRODUCT_BUNDLE_IDENTIFIER = com.WBooks.WBooks;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
@@ -1085,7 +1145,11 @@
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = WBooksTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.Wolox.WBooksTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -1097,7 +1161,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				INFOPLIST_FILE = WBooksUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.Wolox.WBooksUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -1153,6 +1221,25 @@
 			defaultConfigurationName = Debug;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		CEB208C7241C37DB0069DD48 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.13.2;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		CEB208C8241C37DB0069DD48 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CEB208C7241C37DB0069DD48 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 9D1574F91CB1B27500EA395E /* Project object */;
 }

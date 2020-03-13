@@ -14,8 +14,4 @@ class BookViewModel {
     init(book: Book) {
         _book = book
     }
-    
-    var title: String { return _book.title }
-    var author: String { return _book.author }
-    var cover: UIImage { return _book.cover }
 }
