@@ -52,6 +52,9 @@
 		CE93E56923C77B0F00232295 /* LandingScreenController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE93E56823C77B0F00232295 /* LandingScreenController.swift */; };
 		CE93E56B23C77E4900232295 /* LandingScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE93E56A23C77E4900232295 /* LandingScreenView.swift */; };
 		CEB208C9241C37DB0069DD48 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = CEB208C8241C37DB0069DD48 /* Kingfisher */; };
+		CEB208CB241F83220069DD48 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB208CA241F83220069DD48 /* User.swift */; };
+		CEB208CD241F844C0069DD48 /* Wish.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB208CC241F844C0069DD48 /* Wish.swift */; };
+		CEB208CF241F84A40069DD48 /* Rent.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB208CE241F84A40069DD48 /* Rent.swift */; };
 		CEB6CB4D23CCF2AC00DB149D /* LandingScreenView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEB6CB4C23CCF2AC00DB149D /* LandingScreenView.xib */; };
 		CEB6CB5123CDA2A800DB149D /* LibraryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB6CB4F23CDA2A800DB149D /* LibraryController.swift */; };
 		CEB6CB5423CDA2C500DB149D /* LibraryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB6CB5323CDA2C500DB149D /* LibraryView.swift */; };
@@ -153,6 +156,9 @@
 		CE93E56423C3CC0D00232295 /* Production.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Production.xcconfig; sourceTree = "<group>"; };
 		CE93E56823C77B0F00232295 /* LandingScreenController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingScreenController.swift; sourceTree = "<group>"; };
 		CE93E56A23C77E4900232295 /* LandingScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LandingScreenView.swift; path = WBooks/LandingScreen/LandingScreenView.swift; sourceTree = SOURCE_ROOT; };
+		CEB208CA241F83220069DD48 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		CEB208CC241F844C0069DD48 /* Wish.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Wish.swift; sourceTree = "<group>"; };
+		CEB208CE241F84A40069DD48 /* Rent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rent.swift; sourceTree = "<group>"; };
 		CEB6CB4C23CCF2AC00DB149D /* LandingScreenView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LandingScreenView.xib; sourceTree = "<group>"; };
 		CEB6CB4F23CDA2A800DB149D /* LibraryController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryController.swift; sourceTree = "<group>"; };
 		CEB6CB5323CDA2C500DB149D /* LibraryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryView.swift; sourceTree = "<group>"; };
@@ -425,6 +431,9 @@
 			children = (
 				CEB6CB5D23CDAE9C00DB149D /* Book.swift */,
 				CE6FA6552409ACE800772E9F /* BookViewModel.swift */,
+				CEB208CA241F83220069DD48 /* User.swift */,
+				CEB208CC241F844C0069DD48 /* Wish.swift */,
+				CEB208CE241F84A40069DD48 /* Rent.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -638,6 +647,8 @@
 				CE8E14D12401C9150034DDB4 /* RentalsView.swift in Sources */,
 				CEB934DD1D21992100DF75C2 /* Environment.swift in Sources */,
 				CE6FA65B2409B7BD00772E9F /* BookRepository.swift in Sources */,
+				CEB208CB241F83220069DD48 /* User.swift in Sources */,
+				CEB208CD241F844C0069DD48 /* Wish.swift in Sources */,
 				CE8E14DA2401C9770034DDB4 /* WishlistController.swift in Sources */,
 				CE8E14DD2401C9830034DDB4 /* WishlistView.swift in Sources */,
 				CE8E14D42401C9550034DDB4 /* AddNewController.swift in Sources */,
@@ -652,6 +663,7 @@
 				E1530D9C1ED37905002A9002 /* RollbarService.swift in Sources */,
 				CE8E14C72401C2710034DDB4 /* SettingsView.swift in Sources */,
 				CEB6CB5723CDA76300DB149D /* BookCell.swift in Sources */,
+				CEB208CF241F84A40069DD48 /* Rent.swift in Sources */,
 				CEB6CB5E23CDAE9C00DB149D /* Book.swift in Sources */,
 				CE93E56923C77B0F00232295 /* LandingScreenController.swift in Sources */,
 				CE8E14BC2401B0BF0034DDB4 /* TabBarController.swift in Sources */,
