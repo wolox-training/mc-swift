@@ -69,7 +69,14 @@ extension LibraryController: UITableViewDataSource {
         if let url = URL(string: book.image) {
             let resource = ImageResource(downloadURL: url)
             cell.bookCover.kf.indicatorType = .activity
-            cell.bookCover.kf.setImage(with: resource)
+            cell.bookCover.kf.setImage(with: resource, placeholder: UIImage.book5) { result in
+                switch result {
+                case .success(let value):
+                    print("SUCCESS: \(value.image).")
+                case .failure (let error):
+                    print("ERROR: \(error).")
+                }
+            }
         } else {
             cell.bookCover.image = UIImage.book1
         }
