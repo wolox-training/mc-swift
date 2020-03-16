@@ -14,6 +14,7 @@ public struct Book: Codable {
     let author: String
     let genre: String
     let year: String
+    let status: String
     let image: String
 
     public init(from: Decoder) throws {
@@ -23,6 +24,7 @@ public struct Book: Codable {
         author = try container.decode(String.self, forKey: .author)
         genre = try container.decode(String.self, forKey: .genre)
         year = try container.decode(String.self, forKey: .year)
+        status = try container.decode(String.self, forKey: .status)
         image = try container.decode(String.self, forKey: .image)
     }
     
@@ -32,6 +34,22 @@ public struct Book: Codable {
         case author
         case genre
         case year
+        case status
         case image
+    }
+}
+
+enum BookStatus: String, CaseIterable {
+    case available
+    case in_your_hands
+    case unavailable
+
+    func status_label() -> String {
+        switch self {
+        case .available:
+            return "AVAILABLE_STATUS".localized()
+        default:
+            return "UNAVAILABLE_STATUS".localized()
+        }
     }
 }
