@@ -35,6 +35,10 @@ extension UIImage {
     public static var book6: UIImage {
         return UIImage(named: "img_book6")!
     }
+    
+    public static var cover_unavailable: UIImage {
+        return UIImage(named: "cover_not_available")!
+    }
 
     // MARK: Navigation Bar Icons
 
