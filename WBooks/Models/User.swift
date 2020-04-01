@@ -11,13 +11,11 @@ import UIKit
 struct User: Codable {
     let id: Int
     let username: String
-    let password: String
     let avatar: String
 
     enum CodingKeys: String, CodingKey {
         case id
         case username
-        case password
         case avatar = "image"
     }
 }

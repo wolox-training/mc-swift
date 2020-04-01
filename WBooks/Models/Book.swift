@@ -41,10 +41,10 @@ public struct Book: Codable {
 
 enum BookStatus: String, CaseIterable {
     case available
-    case in_your_hands
+    case inYourHands
     case unavailable
-
-    func status_label() -> String {
+    
+    var label: String {
         switch self {
         case .available:
             return "AVAILABLE_STATUS".localized()

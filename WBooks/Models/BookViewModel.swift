@@ -14,8 +14,4 @@ class BookViewModel {
     init(book: Book) {
         _book = book
     }
-    
-    var book_status: BookStatus {
-        return BookStatus(rawValue: _book.status) ?? .unavailable
-    }
 }

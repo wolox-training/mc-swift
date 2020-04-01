@@ -16,7 +16,7 @@ class LibraryViewModel {
             onUpdate?()
         }
     }
-    
+
     var onUpdate: (() -> Void)?
 
     public func numberOfCells() -> Int {

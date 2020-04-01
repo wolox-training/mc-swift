@@ -56,6 +56,14 @@ extension LibraryController: UITableViewDelegate {
     func tableView(_ booksTable: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return 40
     }
+    
+    func tableView(_ booksTable: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let selectedBook = _viewModel.getCellBook(at: indexPath)
+        booksTable.deselectRow(at: indexPath, animated: true)
+        let bookDetailVM = BookDetailViewModel(with: selectedBook)
+        let bookDetailController = BookDetailController(viewModel: bookDetailVM)
+        navigationController?.pushViewController(bookDetailController, animated: true)
+    }
 }
 
 // MARK: - UITableViewDataSource
@@ -69,14 +77,7 @@ extension LibraryController: UITableViewDataSource {
         if let url = URL(string: book.image) {
             let resource = ImageResource(downloadURL: url)
             cell.bookCover.kf.indicatorType = .activity
-            cell.bookCover.kf.setImage(with: resource, placeholder: UIImage.book5) { result in
-                switch result {
-                case .success(let value):
-                    print("SUCCESS: \(value.image).")
-                case .failure (let error):
-                    print("ERROR: \(error).")
-                }
-            }
+            cell.bookCover.kf.setImage(with: resource, placeholder: UIImage.book5)
         } else {
             cell.bookCover.image = UIImage.book1
         }
