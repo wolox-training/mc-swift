@@ -12,7 +12,7 @@ import Alamofire
 
 internal class CommentRepository {
     public func fetchComments(book: Book, onSuccess: @escaping ([Comment]) -> Void, onError: @escaping (Error) -> Void) {
-        let url = URL(string: "https://swift-training-backend.herokuapp.com/books/\(book.id)/comments")!
+        guard let url = URL(string: "https://swift-training-backend.herokuapp.com/books/\(book.id)/comments") else { return }
         request(url, method: .get, headers: ["Content-Type": "application/json",
         "Accept": "application/json"]).responseJSON { response in
             switch response.result {

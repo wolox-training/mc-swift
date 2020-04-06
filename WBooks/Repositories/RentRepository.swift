@@ -12,7 +12,7 @@ import Alamofire
 
 internal class RentRepository {
     public func rentBook(book: Book, onSuccess: @escaping (Rent) -> Void, onError: @escaping (Error) -> Void) {
-        let url = URL(string: "https://swift-training-backend.herokuapp.com/users/2/rents")!
+        guard let url = URL(string: "https://swift-training-backend.herokuapp.com/users/2/rents") else { return }
         let params: [String: Any] = [
             "userID": 2,
             "bookID": book.id,
