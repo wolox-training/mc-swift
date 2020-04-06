@@ -70,16 +70,21 @@ extension LibraryController: UITableViewDelegate {
 extension LibraryController: UITableViewDataSource {
     func tableView(_ booksTable: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = _view.booksTable.dequeueReusableCell(withIdentifier: LibraryController.cellIdentifier) as? BookCell else { return UITableViewCell() }
-        let book = _viewModel.books[indexPath.row]
+        let book = _viewModel.books[indexPath.row].book
+        
+        print("BOOOOOOOOOK")
+        print(book)
+        print("TITLEEEEE")
+        print(book.title)
 
         cell.bookTitle.text = book.title
         cell.bookAuthor.text = book.author
         if let url = URL(string: book.image) {
             let resource = ImageResource(downloadURL: url)
             cell.bookCover.kf.indicatorType = .activity
-            cell.bookCover.kf.setImage(with: resource, placeholder: UIImage.cover_unavailable)
+            cell.bookCover.kf.setImage(with: resource)
         } else {
-            cell.bookCover.image = UIImage.cover_unavailable
+            cell.bookCover.image = UIImage.coverUnavailable
         }
 
         return cell

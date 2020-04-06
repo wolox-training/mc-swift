@@ -38,18 +38,3 @@ public struct Book: Codable {
         case image
     }
 }
-
-enum BookStatus: String, CaseIterable {
-    case available
-    case inYourHands
-    case unavailable
-    
-    var label: String {
-        switch self {
-        case .available:
-            return "AVAILABLE_STATUS".localized()
-        default:
-            return "UNAVAILABLE_STATUS".localized()
-        }
-    }
-}

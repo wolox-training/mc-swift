@@ -26,6 +26,7 @@ class BookDetailController: BaseViewController {
     }
     
     override func loadView() {
+        _bookDetailView.delegate = self
         _view.bookDetailCell.addSubview(_bookDetailView)
         view = _view
     }
@@ -48,7 +49,7 @@ class BookDetailController: BaseViewController {
 
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-        _bookDetailView.setup(book: _viewModel.book)
+        _bookDetailView.setup(book: _viewModel.bookVM)
     }
 
     // MARK: - Private
@@ -98,5 +99,20 @@ extension BookDetailController: UITableViewDataSource {
 extension BookDetailController: UITableViewDelegate {
     func tableView(_ detailTable: UITableView, didSelectRowAt indexPath: IndexPath) {
         detailTable.deselectRow(at: indexPath, animated: true)
+    }
+}
+
+extension BookDetailController: BookDetailCellDelegate {
+    func addToWishlist() {
+        print("ADD TO WISHLIST BUTTON SELECTED.")
+    }
+    
+    func rentBook() {
+        guard _viewModel.bookVM.status == .available else {
+            print("BOOK UNAVAILABLE")
+            return
+        }
+        print("RENT BOOK SUCCESS?")
+        _viewModel.rentBook()
     }
 }

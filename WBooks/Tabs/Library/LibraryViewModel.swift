@@ -11,11 +11,13 @@ import UIKit
 class LibraryViewModel {
     private var bookRepository = BookRepository()
 
-    public var books: [Book] = [] {
+    public var books: [BookViewModel] = [] {
         didSet {
             onUpdate?()
         }
     }
+    
+    public var bookItems: [Book] = []
 
     var onUpdate: (() -> Void)?
 
@@ -24,14 +26,17 @@ class LibraryViewModel {
     }
     
     func getBookList() {
-        bookRepository.fetchBooks(onSuccess: { [weak self] (books) in
-            self?.books = books
-        }, onError: { (error) in
+        let onSuccessBooks: ([Book]) -> Void = { (booksArray) in
+            self.bookItems = booksArray
+            self.books = self.bookItems.map { BookViewModel(book: $0) }
+        }
+
+        bookRepository.fetchBooks(onSuccess: onSuccessBooks, onError: { (error) in
             print(error)
         })
     }
 
-    func getCellBook(at indexPath: IndexPath) -> Book {
+    func getCellBook(at indexPath: IndexPath) -> BookViewModel {
         return books[indexPath.row]
     }
 }

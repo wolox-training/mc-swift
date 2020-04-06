@@ -10,7 +10,7 @@ import UIKit
 import WolmoCore
 import Kingfisher
 
-class BookDetailCell: UITableViewCell, NibLoadable {
+class BookDetailCell: UIView, NibLoadable {
     @IBOutlet weak var bookTitle: UILabel!
     @IBOutlet weak var bookStatus: UILabel!
     @IBOutlet weak var bookAuthor: UILabel!
@@ -25,13 +25,14 @@ class BookDetailCell: UITableViewCell, NibLoadable {
         }
     }
     
+    weak var delegate: BookDetailCellDelegate?
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-        selectionStyle = .none
         backgroundColor = .clear
     }
     
-    func setup(book: Book) {
+    func setup(book: BookViewModel) {
         bookTitle.text = book.title
         bookAuthor.text = book.author
         bookYear.text = book.year
@@ -39,18 +40,18 @@ class BookDetailCell: UITableViewCell, NibLoadable {
         if let url = URL(string: book.image) {
             let resource = ImageResource(downloadURL: url)
             bookCover.kf.indicatorType = .activity
-            bookCover.kf.setImage(with: resource, placeholder: UIImage.book5)
+            bookCover.kf.setImage(with: resource, placeholder: UIImage.coverUnavailable)
         } else {
-            bookCover.image = UIImage.book1
+            bookCover.image = UIImage.coverUnavailable
         }
-        bookStatus.text = book.status
-//        if bookStatus.text == "AVAILABLE_STATUS".localized() {
-//            bookStatus.textColor = .green
-//            rentButton.layer.borderColor = UIColor.blue.cgColor
-//        } else {
-//            bookStatus.textColor = .red
-//            rentButton.layer.borderColor = UIColor.gray.cgColor
-//        }
+        bookStatus.text = book.status.label()
+        if bookStatus.text == "AVAILABLE_STATUS".localized() {
+            bookStatus.textColor = .green
+            rentButton.layer.borderColor = UIColor.blue.cgColor
+        } else {
+            bookStatus.textColor = .red
+            rentButton.layer.borderColor = UIColor.gray.cgColor
+        }
     }
     
     @IBOutlet weak var addToWishlistButton: UIButton! {
@@ -66,7 +67,7 @@ class BookDetailCell: UITableViewCell, NibLoadable {
     }
     
     @IBAction func addToWishlistButton(_ sender: Any) {
-//        delegate?.addToWishlist()
+        delegate?.addToWishlist()
     }
 
     @IBOutlet weak var rentButton: UIButton! {
@@ -81,6 +82,11 @@ class BookDetailCell: UITableViewCell, NibLoadable {
     }
     
     @IBAction func rentButton(_ sender: Any) {
-//        delegate?.rentBook()
+        delegate?.rentBook()
     }
+}
+
+protocol BookDetailCellDelegate: class {
+    func addToWishlist()
+    func rentBook()
 }

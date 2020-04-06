@@ -16,7 +16,7 @@ import UIKit
 class BookDetailViewModel {
     private var commentRepository = CommentRepository()
     private var rentRepository = RentRepository()
-    public var book: Book!
+    public var bookVM: BookViewModel!
     private var comments: [Comment] = [] {
         didSet {
             onUpdate?()
@@ -25,8 +25,8 @@ class BookDetailViewModel {
     
     var onUpdate: (() -> Void)?
 
-    init(with selectedBook: Book) {
-        book = selectedBook
+    init(with selectedBook: BookViewModel) {
+        bookVM = selectedBook
     }
 
     public func numberOfCells() -> Int {
@@ -34,7 +34,7 @@ class BookDetailViewModel {
     }
 
     public func getComments() {
-        commentRepository.fetchComments(book: book, onSuccess: { [weak self] (comments) in
+        commentRepository.fetchComments(book: bookVM.book, onSuccess: { [weak self] (comments) in
             self?.comments = comments
         }, onError: { (error) in
             print(error)
@@ -45,8 +45,17 @@ class BookDetailViewModel {
         return comments[indexPath.row]
     }
     
-    func rentBook(book: Book, onSuccessRent: @escaping (Rent) -> Void, onFailureRent: @escaping (Error) -> Void) {
-
-       rentRepository.rentBook(book: book, onSuccess: onSuccessRent, onError: onFailureRent)
+    public func rentBook() {
+        let onSuccessRent: (Rent) -> Void = {
+            (rent) in
+            print ("Book rent \(rent).")
+        }
+        
+        let onFailureRent: (Error) -> Void = {
+            (error) in
+            print ("Book rent error \(error).")
+        }
+        
+        rentRepository.rentBook(book: bookVM.book, onSuccess: onSuccessRent, onError: onFailureRent)
     }
 }

@@ -111,6 +111,9 @@
                                     <state key="normal" title="ADD TO WISHLIST">
                                         <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </state>
+                                    <connections>
+                                        <action selector="addToWishlistButton:" destination="iN0-l3-epB" eventType="touchUpInside" id="cc4-S6-tJW"/>
+                                    </connections>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="fill" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fze-nY-QvU" userLabel="RentButton">
                                     <rect key="frame" x="0.0" y="76" width="325" height="36"/>
@@ -118,6 +121,9 @@
                                     <state key="normal" title="RENT">
                                         <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </state>
+                                    <connections>
+                                        <action selector="rentButton:" destination="iN0-l3-epB" eventType="touchUpInside" id="FRQ-qQ-oJL"/>
+                                    </connections>
                                 </button>
                             </subviews>
                             <constraints>
@@ -148,14 +154,14 @@
             <nil key="simulatedBottomBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
-                <outlet property="addToWishlistButton" destination="xGt-4U-wGk" id="mF9-0b-8CZ"/>
+                <outlet property="addToWishlistButton" destination="xGt-4U-wGk" id="jgR-Bu-KM5"/>
                 <outlet property="bookAuthor" destination="XWc-ka-ExZ" id="OEz-yK-YBz"/>
                 <outlet property="bookCover" destination="5bK-Oy-9ZL" id="j0B-l5-Zgl"/>
                 <outlet property="bookGenre" destination="tQt-vF-kqW" id="gfa-j3-VjK"/>
                 <outlet property="bookStatus" destination="Y5d-if-E9W" id="5SZ-2M-DPe"/>
                 <outlet property="bookTitle" destination="PNK-gL-L8r" id="xRS-4p-aek"/>
                 <outlet property="bookYear" destination="xeU-ph-5I6" id="IHu-6f-CC3"/>
-                <outlet property="rentButton" destination="fze-nY-QvU" id="1CO-2F-hup"/>
+                <outlet property="rentButton" destination="fze-nY-QvU" id="UqJ-ZY-MQo"/>
             </connections>
             <point key="canvasLocation" x="589.85507246376812" y="83.705357142857139"/>
         </view>
