@@ -36,7 +36,7 @@ extension UIImage {
         return UIImage(named: "img_book6")!
     }
     
-    public static var cover_unavailable: UIImage {
+    public static var coverUnavailable: UIImage {
         return UIImage(named: "cover_not_available")!
     }
 

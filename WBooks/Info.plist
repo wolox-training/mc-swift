@@ -28,8 +28,6 @@
 	<dict>
 		<key>NSAllowsArbitraryLoads</key>
 		<true/>
-		<key>NSAllowsArbitraryLoadsForMedia</key>
-		<true/>
 	</dict>
 	<key>ROLLBAR_CLIENT_ACCESS_TOKEN</key>
 	<string>$(ROLLBAR_CLIENT_ACCESS_TOKEN)</string>
