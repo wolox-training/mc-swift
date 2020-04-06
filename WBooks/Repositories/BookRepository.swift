@@ -12,7 +12,7 @@ import Alamofire
 
 internal class BookRepository {
     public func fetchBooks(onSuccess: @escaping ([Book]) -> Void, onError: @escaping (Error) -> Void) {
-        let url = URL(string: "https://swift-training-backend.herokuapp.com/books")!
+        guard let url = URL(string: "https://swift-training-backend.herokuapp.com/books") else { return }
         request(url, method: .get).responseJSON { response in
             switch response.result {
             case .success(let value):
