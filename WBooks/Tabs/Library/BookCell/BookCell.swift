@@ -13,6 +13,7 @@ class BookCell: UITableViewCell, NibLoadable {
     @IBOutlet weak var bookTitle: UILabel!
     @IBOutlet weak var bookAuthor: UILabel!
     @IBOutlet weak var bookCover: UIImageView!
+
     @IBOutlet weak var cell: UIView! {
         didSet {
             cell.layer.cornerRadius = 8

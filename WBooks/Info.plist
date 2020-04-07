@@ -24,6 +24,11 @@
 	<false/>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>NSAppTransportSecurity</key>
+	<dict>
+		<key>NSAllowsArbitraryLoads</key>
+		<true/>
+	</dict>
 	<key>ROLLBAR_CLIENT_ACCESS_TOKEN</key>
 	<string>$(ROLLBAR_CLIENT_ACCESS_TOKEN)</string>
 	<key>UILaunchStoryboardName</key>
