@@ -56,13 +56,21 @@ extension LibraryController: UITableViewDelegate {
     func tableView(_ booksTable: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return 40
     }
+    
+    func tableView(_ booksTable: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let selectedBook = _viewModel.getCellBook(at: indexPath)
+        booksTable.deselectRow(at: indexPath, animated: true)
+        let bookDetailVM = BookDetailViewModel(with: selectedBook)
+        let bookDetailController = BookDetailController(viewModel: bookDetailVM)
+        navigationController?.pushViewController(bookDetailController, animated: true)
+    }
 }
 
 // MARK: - UITableViewDataSource
 extension LibraryController: UITableViewDataSource {
     func tableView(_ booksTable: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = _view.booksTable.dequeueReusableCell(withIdentifier: LibraryController.cellIdentifier) as? BookCell else { return UITableViewCell() }
-        let book = _viewModel.books[indexPath.row]
+        let book = _viewModel.books[indexPath.row].book
 
         cell.bookTitle.text = book.title
         cell.bookAuthor.text = book.author

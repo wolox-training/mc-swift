@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Tdf-gW-Vec" userLabel="Comment Cell" customClass="CommentCell" customModule="WBooks">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="110"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fG7-iB-LgX" userLabel="Cell">
+                    <rect key="frame" x="0.0" y="5" width="414" height="100"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="9k8-Ga-HtY" userLabel="Stack">
+                            <rect key="frame" x="20" y="15" width="374" height="70"/>
+                            <subviews>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3fu-pg-3r7" userLabel="Avatar">
+                                    <rect key="frame" x="0.0" y="0.0" width="70" height="70"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="70" id="diS-VS-52j"/>
+                                        <constraint firstAttribute="height" constant="70" id="ek6-pW-eoj"/>
+                                    </constraints>
+                                </imageView>
+                                <stackView opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="VE3-RE-XlR" userLabel="CommentInfo">
+                                    <rect key="frame" x="85" y="0.0" width="289" height="70"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l5H-RH-tF3">
+                                            <rect key="frame" x="0.0" y="0.0" width="289" height="31.5"/>
+                                            <attributedString key="attributedText">
+                                                <fragment content="Username">
+                                                    <attributes>
+                                                        <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <font key="NSFont" size="18" name="Arial-BoldMT"/>
+                                                        <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QEN-2M-8vX">
+                                            <rect key="frame" x="0.0" y="31.5" width="289" height="38.5"/>
+                                            <attributedString key="attributedText">
+                                                <fragment content="Content">
+                                                    <attributes>
+                                                        <font key="NSFont" size="18" name="AvenirNext-Regular"/>
+                                                        <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="QEN-2M-8vX" firstAttribute="leading" secondItem="VE3-RE-XlR" secondAttribute="leading" id="3a3-Lt-BvB"/>
+                                        <constraint firstItem="l5H-RH-tF3" firstAttribute="top" secondItem="VE3-RE-XlR" secondAttribute="top" id="3fm-IM-chl"/>
+                                        <constraint firstAttribute="height" constant="70" id="Awv-xI-IKF"/>
+                                        <constraint firstAttribute="trailing" secondItem="QEN-2M-8vX" secondAttribute="trailing" id="aLu-12-E8H"/>
+                                        <constraint firstItem="QEN-2M-8vX" firstAttribute="top" secondItem="l5H-RH-tF3" secondAttribute="bottom" id="agB-yG-htY"/>
+                                        <constraint firstItem="l5H-RH-tF3" firstAttribute="leading" secondItem="VE3-RE-XlR" secondAttribute="leading" id="v7a-ca-78S"/>
+                                        <constraint firstAttribute="trailing" secondItem="l5H-RH-tF3" secondAttribute="trailing" id="ys6-z0-ob8"/>
+                                    </constraints>
+                                </stackView>
+                            </subviews>
+                            <color key="backgroundColor" red="0.92569214109999998" green="0.9643988013" blue="0.98039585350000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <color key="tintColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstItem="3fu-pg-3r7" firstAttribute="top" secondItem="9k8-Ga-HtY" secondAttribute="top" id="Fyd-wF-W9y"/>
+                                <constraint firstItem="3fu-pg-3r7" firstAttribute="leading" secondItem="9k8-Ga-HtY" secondAttribute="leading" id="aPs-8P-jF3"/>
+                                <constraint firstItem="VE3-RE-XlR" firstAttribute="top" secondItem="9k8-Ga-HtY" secondAttribute="top" id="k78-8D-B16"/>
+                                <constraint firstAttribute="trailing" secondItem="VE3-RE-XlR" secondAttribute="trailing" id="vpy-0y-0HI"/>
+                            </constraints>
+                        </stackView>
+                    </subviews>
+                    <color key="backgroundColor" red="0.92569214109999998" green="0.9643988013" blue="0.98039585350000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    <color key="tintColor" systemColor="systemIndigoColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstItem="9k8-Ga-HtY" firstAttribute="leading" secondItem="fG7-iB-LgX" secondAttribute="leading" constant="20" id="3xy-TJ-H7l"/>
+                        <constraint firstAttribute="bottom" secondItem="9k8-Ga-HtY" secondAttribute="bottom" constant="15" id="8Cr-Gp-Je0" userLabel="bottom = BIGstack.bottom"/>
+                        <constraint firstAttribute="trailing" secondItem="9k8-Ga-HtY" secondAttribute="trailing" constant="20" id="grS-6O-9PF"/>
+                        <constraint firstItem="9k8-Ga-HtY" firstAttribute="top" secondItem="fG7-iB-LgX" secondAttribute="top" constant="15" id="nSq-8Z-CwZ"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="0.91658812759999997" green="0.96604782339999995" blue="0.98255366089999996" alpha="1" colorSpace="deviceRGB"/>
+            <constraints>
+                <constraint firstItem="fG7-iB-LgX" firstAttribute="leading" secondItem="Tdf-gW-Vec" secondAttribute="leading" id="0dD-Fh-E49"/>
+                <constraint firstItem="fG7-iB-LgX" firstAttribute="top" secondItem="Tdf-gW-Vec" secondAttribute="top" constant="5" id="UT0-NR-tFa" userLabel="View.top = top"/>
+                <constraint firstAttribute="bottom" secondItem="fG7-iB-LgX" secondAttribute="bottom" constant="5" id="f2i-fc-auj" userLabel="bottom = View.bottom"/>
+                <constraint firstAttribute="trailing" secondItem="fG7-iB-LgX" secondAttribute="trailing" id="hHT-ey-0La"/>
+            </constraints>
+            <nil key="simulatedTopBarMetrics"/>
+            <nil key="simulatedBottomBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="9lB-we-4i5"/>
+            <connections>
+                <outlet property="avatar" destination="3fu-pg-3r7" id="EYn-SU-dNo"/>
+                <outlet property="cell" destination="fG7-iB-LgX" id="j8o-XI-Ico"/>
+                <outlet property="content" destination="QEN-2M-8vX" id="yE0-gM-CpQ"/>
+                <outlet property="username" destination="l5H-RH-tF3" id="5v6-MJ-x7v"/>
+            </connections>
+            <point key="canvasLocation" x="137.68115942028987" y="152.67857142857142"/>
+        </view>
+    </objects>
+</document>
